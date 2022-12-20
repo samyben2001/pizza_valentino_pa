@@ -1,0 +1,51 @@
+{% extends 'menu/base.html' %}
+{% load static %}
+
+{% block extrahead %}
+    <link rel="stylesheet" href="{% static 'menu/styles/contact.css' %}">
+{% endblock %}
+
+{% block content %}
+    <div class="contact">
+        {%if messageSent %}
+        <div class="success_contact">
+            <h3>Votre mail a été envoyé.</h3>
+            <p>Nous ferons tous notre possible pour répondre à votre demande dans les plus brefs délais.</p>
+        </div>
+        {% endif %}
+
+        <div class="container">   
+            <div class="contact_header">
+                <h2>Contactez-nous</h2>
+                <p>Vous avez une question à propos de l'un de nos plats? Ou bien une commande pour un évènement? N'hésitez pas à nous contacter. Nous ferons tous notre possible pour répondre à votre demande dans les plus brefs délais.</p>
+            </div>
+
+            <form method="post">
+                {% csrf_token %}
+
+                {{ form.non_field_errors }}
+                <div class="fieldWrapper">
+                    {{ form.sender.errors }}
+                    <label for="{{ form.sender.id_for_label }}">Votre E-mail:</label>
+                    {{ form.sender }}
+                </div>
+
+                <div class="fieldWrapper">
+                    {{ form.subject.errors }}
+                    <label for="{{ form.subject.id_for_label }}">Sujet:</label>
+                    {{ form.subject }}
+                </div>
+
+                <div class="fieldWrapper">
+                    {{ form.message.errors }}
+                    <label for="{{ form.message.id_for_label }}">Votre message:</label>
+                    {{ form.message }}
+                </div>
+
+                <div>
+                    <input type="submit" value="Envoyer">
+                </div>        
+            </form>
+        </div>
+    </div>
+{% endblock %}

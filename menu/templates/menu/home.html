@@ -1,0 +1,202 @@
+{% extends 'menu/base.html' %}
+{% load static %}
+
+{% block extrahead %}
+    <title>Pizzeria Valentino Gembloux</title>
+    <meta name="description"  content="Venez faire l'expérience de véritable pizzas et pâtes italiennes dans la région de Gembloux. Notre pizzeria est renommée pour ses ingrédients frais, ses sauces et desserts maisons.">
+    <link rel="stylesheet" href="{% static 'menu/styles/home.css' %}">
+{% endblock %}
+
+{% block content %}
+    <div class="home">
+        <div class="container">
+            <div class="title">
+                <div class="foodbooking_div">
+                    <a class="foodbooking_link" href="https://www.foodbooking.com/ordering/restaurant/menu?company_uid=cfa829ec-f0ed-4d5a-a81b-4d323c6854d2&restaurant_uid=cae7ef12-c4dc-46aa-aad0-7b49dacbda07">Commander en ligne</a>
+                </div>
+                <div class="flex">
+                    <div>
+                        <p>Nous servons les meilleures pizzas aux meilleurs prix depuis 1996.</p>
+                        <p>
+                            Venez faire l'expérience de véritable pizzas italiennes. 
+                            Notre pizzeria est renommée pour ses excellentes pizzas, 
+                            ses pizzaïolos expérimenté et créatif et son personnel serviable et sympathique.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="infos">
+                <h2>Nos Pizzas</h2>
+                <div class="flex">
+                    <div>
+                        <p>Découvrez nos nombreuses pizzas de la pizza traditionnelle Proscuitto, Hawai, Regina, etc à notre délicieuse pizza Alla Rucolla.</p>
+                    </div>
+                    <div class="slideshow-container">
+                        <div class="mySlides mySlides-pizzas fade">
+                            <img src="{% static 'menu/images/pizza.jpg' %}" alt="pizza">
+                        </div>
+                        <div class="mySlides mySlides-pizzas fade">
+                            <img src="{% static 'menu/images/pizza2.jpg' %}" alt="pizza 2">
+                        </div>
+
+                        <a class="prev" onclick="plusSlides(-1,0)">&#10094;</a>
+                        <a class="next" onclick="plusSlides(1,0)">&#10095;</a>
+                    </div>
+                </div>
+                <div class="discover">
+                    <a href="{% url 'menu' %}#pizzas"> Décrouvrez nos pizzas</a>
+                </div>
+            </div>
+            
+            <div class="infos">
+                <h2>Nos Pâtes</h2>
+                <div class="flex">
+                    <div>
+                        <p>Laissez-vous tenter par nos délicieuses pâtes: de la traditionnelle Bolognaise, Carbonara et jambon crème à notre célèbre sauce Scampi. Vous trouverez forcément de quoi satisfaire votre appétit et votre goût...</p>
+                    </div>
+                    <div class="slideshow-container">
+                        <div class="mySlides mySlides-pates fade">
+                            <img src="{% static 'menu/images/pasta.jpg' %}" alt="pâtes">
+                        </div>
+                        <div class="mySlides mySlides-pates fade">
+                            <img src="{% static 'menu/images/pasta2.jpg' %}" alt="pâtes 2">
+                        </div>
+
+                        <a class="prev" onclick="plusSlides(-1,1)">&#10094;</a>
+                        <a class="next" onclick="plusSlides(1,1)">&#10095;</a>
+                    </div>
+                </div>
+                <div class="discover">
+                    <a href="{% url 'menu' %}#pates"> Décrouvrez nos pâtes</a>
+                </div>
+            </div>
+
+            <div class="infos">
+                <h2>Nos Desserts Maison</h2>
+                <div class="flex">
+                    <div>
+                        <p> Laissez-vous séduire par l'un de nos desserts Maison: un savoureux tiramisu, une onctueuse mousse au chocolat, ou notre gourmande mini pizza Nutella...</p>
+                    </div>
+                    <div class="slideshow-container">
+                        <div class="mySlides mySlides-desserts fade">
+                            <img src="{% static 'menu/images/dessert-mousse.jpg' %}" alt="dessert mousse au chocolat">
+                        </div>
+                        <div class="mySlides mySlides-desserts fade">
+                            <img src="{% static 'menu/images/dessert-mousse2.jpg' %}" alt="dessert mousse au chocolat 2">
+                        </div>
+                        <div class="mySlides mySlides-desserts fade">
+                            <img src="{% static 'menu/images/dessert-tiramisu.jpg' %}" alt="dessert tiramisu">
+                        </div>
+                        <div class="mySlides mySlides-desserts fade">
+                            <img src="{% static 'menu/images/dessert-tiramisu2.jpg' %}" alt="dessert tiramisu 2">
+                        </div>
+
+                        
+                        <a class="prev" onclick="plusSlides(-1,2)">&#10094;</a>
+                        <a class="next" onclick="plusSlides(1,2)">&#10095;</a>
+                    </div>
+                </div>
+                <div class="discover">
+                    <a href="{% url 'menu' %}#desserts"> Décrouvrez nos desserts</a>
+                </div>
+            </div>
+
+            <div class="infos">
+                <h2>Ingrédients frais !!!</h2>
+                <div class="flex">
+                    <div>
+                        <p>Tout nos ingrédients sont frais et nous choisissons tout ce qu'il y a de meilleurs pour vos pizzas, de la pâte à pizza jusqu'à notre mozzarella (Galbani, meilleurs du marché).</p>
+                    </div>
+                    <div class="slideshow-container">
+                        <div class="mySlides mySlides-ingredients fade">
+                            <img src="{% static 'menu/images/ingredients.jpg' %}" alt="ingrédients">
+                        </div>
+                        <div class="mySlides mySlides-ingredients fade">
+                            <img src="{% static 'menu/images/ingredients2.jpg' %}" alt="ingrédients 2">
+                        </div>
+                        
+                        <a class="prev" onclick="plusSlides(-1,3)">&#10094;</a>
+                        <a class="next" onclick="plusSlides(1,3)">&#10095;</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+{% block scripts %}
+
+<!-- Carousel -->
+<script>
+    let slideIndex = [1,1,1,1];
+    let slideId = ["mySlides-pizzas", "mySlides-pates", "mySlides-desserts", "mySlides-ingredients"]
+    showSlides(1, 0);
+    showSlides(1, 1);
+    showSlides(1, 2);
+    showSlides(1, 3);
+
+    function plusSlides(n, no) {
+        showSlides(slideIndex[no] += n, no);
+    }
+
+    function showSlides(n, no) {
+        let i;
+        let x = document.getElementsByClassName(slideId[no]);
+        
+        if (n > x.length) {slideIndex[no] = 1}    
+        if (n < 1) {slideIndex[no] = x.length}
+
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";  
+        }
+        x[slideIndex[no]-1].style.display = "block";  
+    }
+</script>
+
+<!-- Rich Snippets -->
+<script type="application/ld+json">
+    {
+        "@context" : "http://schema.org",
+        "@type" : "Restaurant",
+        "name" : "Pizzerria Valentino",
+        "telephone" : [ "081/56 95 38", "0476/73 45 62" ],
+        "address" : {
+            "@type" : "PostalAddress",
+            "streetAddress" : "391 Chaussée de namur",
+            "addressLocality" : "Gembloux",
+            "postalCode" : "5030"
+        },
+        "image" : "https://scontent.fbru1-1.fna.fbcdn.net/v/t1.6435-9/161724613_130274132431834_6340703908554357492_n.jpg?_nc_cat=110&ccb=1-5&_nc_sid=e3f864&_nc_ohc=eGOFi9trivkAX8T3_D2&_nc_ht=scontent.fbru1-1.fna&oh=00_AT9BY8DMKj7bg7sgTC1mxI082Yg3Lyr7ykW2VM_F7PJ8hQ&oe=6275F294",
+        "priceRange" : "$$",
+        "menu" : "https://pizzeriavalentino.herokuapp.com/menu",
+        "servesCuisine" : [ "Pizzas", "Pâtes", "Desserts" ],
+        "openingHoursSpecification": [
+            {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": [
+                "Monday",
+                "Wednesday",
+                "Thursday",
+                "Friday",
+                "Saturday"
+            ],
+                "opens": "11:30",
+                "closes": "14:00"
+            },
+            {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": [
+                "Monday",
+                "Wednesday",
+                "Thursday",
+                "Friday",
+                "Saturday",
+                "Sunday"
+            ],
+                "opens": "18:00",
+                "closes": "22:00"
+            }
+        ]
+    }
+</script>
+{% endblock %}

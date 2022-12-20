@@ -1,0 +1,78 @@
+{% extends 'menu/base.html' %}
+{% load static %}
+
+{% block extrahead %}
+    <title>Infos - Pizzeria Valentino Gembloux</title>
+    <meta name="description"  content="Horaires pizzeria: Ouvert tous les jours sauf Mardi. 081/56 95 38 ou 0476/73 45 62. Venez profitez de merveilleuses pizzas dans la région de Gembloux.">
+    <link rel="stylesheet" href="{% static 'menu/styles/infos.css' %}">
+{% endblock %}
+
+{% block content %}
+    <div class="infos">
+        <div class="container">
+            <div class="presentation">
+                <div class="img-entree">
+                    <img src="{% static 'menu/images/valentino.jpg' %}" alt="Pizzeria Valentino Beuzet entrée">
+                </div>
+                <div class="infosLivraisonMobile">Livraison gratuite à partir de 16€ dans un rayon de 10km.</div>
+                <div class="horaire">
+                    <h2>HEURES D'OUVERTURE</h2>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td>Lundi</td>
+                                <td>
+                                    <p>11:30 - 14:00</p>
+                                    <p>18:00 - 22:00</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Mardi</td>
+                                <td><p>FERM&Eacute;</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Mercredi</td>
+                                <td>
+                                    <p>11:30 - 14:00</p>
+                                    <p>18:00 - 22:00</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Jeudi</td>
+                                <td>
+                                    <p>11:30 - 14:00</p>
+                                    <p>18:00 - 22:00</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Vendredi</td>
+                                <td>
+                                    <p>11:30 - 14:00</p>
+                                    <p>18:00 - 22:00</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Samedi</td>
+                                <td>
+                                    <p>11:30 - 14:00</p>
+                                    <p>18:00 - 22:00</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Dimanche et fériés</td>
+                                <td><p>18:00 - 22:00</p>
+                                    <p></p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="infosLivraisonDesktop">Livraison gratuite à partir de 16€ dans un rayon de 10km.</div>
+            <div class="map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14346.29903923181!2d4.735917811680761!3d50.532471913358876!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c183245f71b943%3A0x46476ac923a0f4c8!2sPizzeria%20Valentino%20Beuzet!5e0!3m2!1sfr!2sbe!4v1649843072078!5m2!1sfr!2sbe" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,239 @@
+/* Extra small devices (phones, 600px and down) */
+.flex{
+    display: flex;
+    flex-direction: column;
+}
+
+.home .container{
+    padding: 0 10px 0 10px;
+    margin: 0;
+    font-size: var(--pSizeXS);
+}
+
+/* Pizzeria Description */
+.home h1{ 
+    width: fit-content;
+    margin: 0 auto 20px auto;
+    padding: 5px 20px;
+    color: var(--colorWhite);
+    background-color: var(--colorRed);
+    border: 3px solid var(--colorGreen);
+    border-radius: 45px;
+    font-weight: 700;
+    font-family: ValentinoFont;   
+    font-size: var(--h1SizeXS);
+    box-shadow: 0px 4px 10px 5px #444;
+}
+
+.home .title{ 
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.home .title p{ 
+    font-size: var(--pSizeXS);
+}
+
+/*  Plats Description */
+.home .infos{
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 12px;
+    background-color: var(--colorDarkGrey);
+    color: var(--colorWhite);
+    box-shadow: 0px 4px 10px 5px #444;
+}
+
+.home .infos p{
+    font-size: var(--pSizeXS);
+}
+
+.home .infos h2{
+    font-size: var(--h2SizeXS);
+    font-weight: 600;
+    margin-bottom: 15px;
+    border-bottom: 2px solid var(--colorRed);
+}
+
+.home .infos .flex div:first-child{
+    flex-basis: 0;
+    flex-grow: 2;
+}
+
+
+.home .infos div.discover{
+    margin-top: 25px;
+}
+
+.home .infos .discover a{
+    display: block;
+    width: fit-content;
+    color: var(--colorDarkGrey);
+    font-weight: 700; 
+    font-size: var(--pSizeXS);
+    text-decoration: none;
+    border-radius: 45px;
+    background-color: var(--colorGreen);
+    padding: 5px 15px;
+    margin: 20px auto;
+    box-shadow: 0px 3px 3px 3px #181818;
+}
+
+
+@media (hover: hover) {
+    .home .infos .discover a:hover{
+        background-color: #00572a;
+        cursor: pointer;
+        color: var(--colorWhite);
+    }
+
+    .home .infos .discover a:active{
+        transform: translateY(5px);
+        box-shadow: none;
+    }
+}
+
+@media (hover: none) {
+    .home .infos .discover a:active{
+        background-color: #00572a;
+        cursor: pointer;
+        color: var(--colorWhite);
+        transform: translateY(5px);
+        box-shadow: none;
+    }
+}
+
+
+.home .infos .flex div:last-child{  
+    flex-basis: 0;
+    flex-grow: 1;
+    text-align: center;
+}
+
+/* Slideshow container */
+.slideshow-container {
+    width: 100%;
+    position: relative;
+    padding-top: 15px;
+  }
+  
+  /* Hide the images by default */
+  .mySlides-pizzas, .mySlides-pates, .mySlides-desserts, .mySlides-ingredients {
+    display: none;
+  }
+  
+  /* Next & previous buttons */
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+
+  .prev {
+    left: 0;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover, .next:hover {
+    background-color: #0e1010cc;
+  }
+
+  /* Fading animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+
+.home .infos img{  
+    width: auto;   
+    max-width: 100%;
+    height: 125px;  
+    border-radius: 12px;
+}
+
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+
+}
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+
+    .flex{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .home .container{
+        padding: 0;
+        margin: 25px auto;
+    }
+    
+    /* Pizzeria Description */
+    .home .title{ 
+        margin: 0 100px 40px 100px;
+    }
+
+    .home .title p{ 
+        font-size: var(--pSizeXL);
+    }
+    
+    .home h1{
+        font-size: var(--h1SizeXL);
+        margin-bottom: 30px;
+    }
+    
+    /* Plats Description */
+    .home .infos{
+        margin-bottom: 40px;
+    }
+
+    .home .infos a{
+        font-size: var(--pSizeXL);
+    }
+
+    .home .infos p{
+        font-size: var(--pSizeXL);
+        padding: 0 20px;
+    }
+    
+    .home .infos h2{
+        font-size: var(--h2SizeXL);
+    }
+
+    .slideshow-container {
+        padding-top: 0;
+      }
+      
+
+    .home .infos img{ 
+        height: 200px;
+    }
+}
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+
+}
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+}

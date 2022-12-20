@@ -1,0 +1,247 @@
+/* Extra small devices (phones, 600px and down) */
+.menu .container{
+    padding: 0 15px 50px 15px;
+    margin: 0;
+    color: var(--colorWhite);
+    background-color: var(--colorDarkGrey);
+    box-shadow: 0px 4px 10px 5px #444;
+}
+
+/* Menu Nav */
+.menu .container .menu_nav{
+    display: flex;
+    padding-top: 25px;
+    padding-bottom: 15px;
+    overflow-x:auto;
+    max-width: 100%;
+}
+
+.menu .container .menu_nav a{
+    flex-grow: 1;
+    text-align: center;
+    color: var(--colorDarkGrey);
+    font-weight: 600;
+    font-size: var(--pSizeXS);
+    text-decoration: none;
+    border-radius: 45px;
+    background-color: var(--colorGreen);
+    padding: 0 5px;
+    margin: 0 10px;
+    box-shadow: 0px 3px 3px 3px #181818;
+}
+
+@media (hover: hover) {
+    .menu .container .menu_nav a:hover{
+        background-color: #00572a;
+        cursor: pointer;
+        color: var(--colorWhite);
+    }
+
+    .menu .container .menu_nav a:active{
+        transform: translateY(5px);
+        box-shadow: none;
+    }
+}
+
+@media (hover: none) {
+    .menu .container .menu_nav a:active{
+        background-color: #00572a;
+        cursor: pointer;
+        color: var(--colorWhite);
+        transform: translateY(5px);
+        box-shadow: none;
+    }
+}
+
+/* Menu Type Container */
+.menu .container h2{
+    color: var(--colorRed);
+    font-weight: 700;
+    font-family: ValentinoFont;
+    font-size: var(--h2SizeXS);
+    text-align: center;
+    border-bottom: 2px solid var(--colorRed);
+}
+
+.menu .foodTypeContainer{
+    border: 2px solid var(--colorGreen);
+    border-radius: 15px;
+    padding: 15px;
+    margin: 25px 0 0 0;
+    box-shadow: 0px 3px 3px 3px #181818;
+}
+
+.menu .infos_suppl{
+    padding-left: 20px; 
+    color: var(--colorLightGrey);
+    font-size: var(--menuSizeXS);
+}
+
+.menu .foodList .foodseparator{
+    margin: 15px 0;
+    font-size: var(--menuSizeXS);
+}
+
+/* Allergen Tooltip */
+.tooltip{
+    position: relative;
+    padding-left: 5px;
+    color: var(--colorWhite);
+}
+.tooltip .tooltiptext {
+    visibility: hidden;
+    position: absolute;
+    top: -20px;
+    left: 120%;
+    z-index: 1;
+    color: #222222;
+    text-align: left;
+    padding: 7px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.8em;  
+    border-radius: 12px;
+    background-color: var(--colorWhite);
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+
+/* Food Description */
+.menu .food{
+    display: flex;
+    align-items: center;
+}
+
+.food_fix{
+    width: 40px;
+}
+
+.food_name{
+    width: calc((100% - 40px)/100*65);
+}
+
+.food_name .name{
+    padding-left: 5px;
+}
+
+.food_thumbnail:hover{
+    cursor: pointer;
+}
+
+.food_thumbnail{
+    height: 40px;
+    width: 40px;
+    border-radius: 9px;
+}
+
+.food_image{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    background: rgba(0, 0, 0, 0.75);
+    z-index: 10;
+}
+
+.food_image img{
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 12px;
+}
+
+.menu .food .price{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    width: calc((100% - 40px)/100*35);
+    font-weight: 600;
+}
+
+.price img.vegan_img{
+    width: 25px;
+    padding-right: 5px;
+}
+
+.menu .food .suggestion{
+    width: fit-content;
+    color: var(--colorRed);
+    font-weight: 600;
+    background-color: var(--colorWhite);
+    border-radius: 45px;
+    margin-left: 5px;
+    padding: 0 5px;
+}
+
+.menu .foodTypeContainer .ingredients{
+    padding-left: 10px;
+    color: var(--colorLightGrey);
+}
+
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    
+    .tooltip .tooltiptext {
+        width: max-content;
+    }
+
+    .menu .container{
+        padding: 0 125px 50px 125px;
+        margin: 25px auto;
+        border-radius: 15px;
+    }
+    
+    /* Menu Nav */
+    .menu .container .menu_nav a{
+        padding: 0;
+        font-size: var(--pSizeXL);
+    }
+    
+    /* Menu Type Container */
+    .menu .foodTypeContainer{
+        padding: 25px;
+        margin: 50px 0 0 0;
+    }
+    
+    .food_thumbnail{
+        height: 50px;
+        width: 50px;
+    }
+
+    .price img.vegan_img{
+        width: 35px;
+        padding-right: 10px;
+    }
+    
+    .menu .container h2{
+        font-size: var(--h2SizeXL);
+    }
+
+    .menu .foodlist .foodseparator{
+        font-size: var(--menuSizeXL);
+    }
+
+    .menu .infos_suppl{
+        font-size: var(--menuSizeXL);
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+
+}

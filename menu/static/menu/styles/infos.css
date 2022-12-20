@@ -1,0 +1,160 @@
+.infos .container{
+    padding: 0 10px 0 10px;
+    margin-top: 25px;
+}
+
+.infos .presentation{
+    display: flex;
+    flex-direction: column;
+}
+
+.infos .presentation div:nth-child(1){
+    flex-basis: 0;
+    flex-grow: 1;
+    text-align: center;
+}
+
+.infos .presentation img{
+    width: 85%;
+    height: auto;
+    border-radius: 12px;
+}
+
+.infosLivraisonDesktop{
+    display: none;
+    font-weight: 500;
+}
+
+.infosLivraisonMobile{
+    display: block;
+    font-size: var(--pSizeXS);
+    text-align: center;
+    font-weight: 500;
+}
+
+.infos .horaire{
+    flex-basis: 0;
+    flex-grow: 1;
+    text-align: left;
+    margin: 15px auto 0 auto;
+    width: 100%;
+    background-color: var(--colorDarkGrey);    
+    border: 15px solid var(--colorDarkGrey);
+    border-radius: 12px;
+}
+
+.infos .horaire h2{
+    text-align: center;
+    color: var(--colorRed);
+    font-weight: 700;
+    font-family: ValentinoFont;
+    font-size: var(--h2SizeXS);
+}
+
+.infos .horaire table{
+    border-collapse: collapse;
+    font-size: var(--pSizeXS);
+    font-weight: 600;
+}
+
+.infos .horaire table tr:nth-child(odd){
+    background-color: var(--colorWhite);
+    color: var(--colorDarkGrey)
+}
+
+.infos .horaire table tr:nth-child(even){
+    color: var(--colorWhite)
+}
+
+.infos .horaire table tr td{
+    padding: 5px 0;
+}
+
+.infos .horaire table tr td:first-child{
+    padding-left: 15px;
+}
+
+.infos .horaire table tr td:last-child{
+    width: 100%;
+    text-align: center;
+}
+
+.infos .horaire span{
+    font-weight: 500;
+}
+
+.infos .map{
+    text-align: center;
+    margin: 25px 0 25px 0;
+}
+
+.infos .map iframe{
+    width: 100%;
+    height: 350px;
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+
+}
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .infos .container{
+        padding: 0;
+        margin: 25px auto;
+    }
+
+    .infos .container h2{
+        font-size: var(--h2SizeXL);
+    }
+
+    .infos .presentation{
+        flex-direction: row;
+    }
+
+    .infos .presentation img{
+        width: 100%;
+    }
+
+    .infosLivraisonDesktop{
+        font-size: var(--pSizeXS);
+        display: block;
+        width: 50%;
+    }
+    
+    .infosLivraisonMobile{
+        display: none
+    }
+
+    .infos .presentation .horaire{
+        margin: 0 0 0 15px;
+        text-align: center;
+    }
+    
+    .infos .horaire table{
+        height: 90%;
+        font-size: var(--pSizeXS);
+    }
+
+    .infos .map iframe{
+        width: 75%;
+        height: 500px;
+    }
+}
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .infos .horaire table{
+        font-size: var(--pSizeXL);
+    }
+
+    .infosLivraisonDesktop{
+        font-size: var(--pSizeXL);
+        display: block;
+        width: 50%;
+    }
+}
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+
+}
+

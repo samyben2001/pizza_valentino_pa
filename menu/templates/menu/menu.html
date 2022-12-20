@@ -1,0 +1,220 @@
+{% extends 'menu/base.html' %}
+{% load static %}
+
+{% block extrahead %}
+    <title>La carte - Pizzeria Valentino Gembloux</title>
+    <meta name="description"  content="Découvrez notre carte: d'excellentes pizzas, pâtes et d'incroyables desserts fait maison. Nous livrons dans un rayon de 10km, à partir de 16€">
+    <link rel="stylesheet" href="{% static 'menu/styles/menu.css' %}">
+{% endblock %}
+
+{% block content %}
+    <div class="menu">
+        <div class="foodbooking_div">
+            <a class="foodbooking_link" href="https://www.foodbooking.com/ordering/restaurant/menu?company_uid=cfa829ec-f0ed-4d5a-a81b-4d323c6854d2&restaurant_uid=cae7ef12-c4dc-46aa-aad0-7b49dacbda07">Commander en ligne</a>
+        </div>
+        <div class="container">
+            <div class="menu_nav">
+                <a href="#entrees"><div>Entrées</div></a>
+                <a href="#pizzas"><div>Pizzas</div></a>
+                <a href="#pates"><div>Pâtes</div></a>
+                <a href="#desserts"><div>Desserts</div></a>
+                <a href="#boissons"><div>Boissons</div></a>
+            </div>
+
+            <div id="entrees" class="foodTypeContainer">
+                <h2>Entrées</h2>
+                <div class="foodlist">
+                    {% for entree in entrees %}
+                    <div class="foodseparator">
+                        <div class="food">
+                            <div class="food_image">
+                                {% if entree.image %}<img src="{{entree.image.url}}" alt="entree {{entree.nom}}">{% endif %} 
+                            </div>
+                            {% if entree.image %}<img class="food_thumbnail" src="{{entree.image.url}}" alt="entree {{entree.nom}} thumbnail">{% endif %}  
+                
+                            <div class="food_name">
+                                <div class="name">{{entree.nom|capfirst}}
+                                    <i class="fas fa-info-circle tooltip">
+                                        <span class="tooltiptext"> 
+                                        {% if not entree.allergene.all %} Aucun allergène{% else %}Allergènes:{% endif %}
+                                        {% for allergene in entree.allergene.all %}
+                                            {{allergene.nom|capfirst}}{% if not forloop.last %}, {% endif %}
+                                        {% endfor %}
+                                        </span>
+                                    </i>
+                                </div>
+                            </div>  
+                            {% if not pizza.image %}<div class="food_fix"></div>{% endif %} 
+                            <div class="price">
+                                <div>{{entree.prix|floatformat:2 }} €</div>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+
+            <div id="pizzas" class="foodTypeContainer">
+                <h2>Pizzas</h2>
+                <div class="foodlist">
+                    {% for pizza in pizzas %}
+                    <div class="foodseparator">
+                        <div class="food">
+                            <div class="food_image">
+                                {% if pizza.image %}<img src="{{pizza.image.url}}" alt="pizza {{pizza.nom}}">{% endif %} 
+                            </div>
+                            {% if pizza.image %}<img class="food_thumbnail" src="{{pizza.image.url}}" alt="pizza {{pizza.nom}} thumbnail">{% endif %}  
+                            <div class="food_name">
+                                {% if pizza.suggestion %}<div class="suggestion">Suggestion !</div>{% endif %}
+                                <div class="name">{{pizza.nom|capfirst}}
+                                    <i class="fas fa-info-circle tooltip">
+                                        <span class="tooltiptext"> 
+                                        {% if not pizza.allergene.all %} Aucun allergène{% else %}Allergènes:{% endif %}
+                                        {% for allergene in pizza.allergene.all %}
+                                            {{allergene.nom|capfirst}}{% if not forloop.last %}, {% endif %}
+                                        {% endfor %}
+                                        </span>
+                                    </i>
+                                </div>
+                            </div>  
+                            {% if not pizza.image %}<div class="food_fix"></div>{% endif %} 
+                            <div class="price">
+                                {% if pizza.vegetarienne %}<div><img class="vegan_img" src="{% static 'menu/images/veggie-icon.png' %}" alt="pizza {{pizza.nom}} végétarienne"></div>{% endif %}
+                                <div>{{pizza.prix|floatformat:2 }} €</div>
+                            </div>
+                        </div>
+                
+                        <div class="ingredients">
+                            {% for ingredient in pizza.ingredient.all|dictsortreversed:"importance" %}
+                                {{ingredient.nom|lower}}{% if not forloop.last %}, {% endif %}
+                            {% endfor %}        
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="infos_suppl">
+                <p> Suppléments au choix entre 1,50 € et 2,50 €</p>
+            </div>
+
+            <div id="pates" class="foodTypeContainer">
+                <h2>Pâtes</h2>
+                <div class="foodlist">
+                    {% for pate in pates %}
+                    <div class="foodseparator">
+                        <div class="food">
+                            <div class="food_image">
+                                {% if pate.image %}<img src="{{pate.image.url}}" alt="pate {{pate.nom}}">{% endif %} 
+                            </div>
+                            {% if pate.image %}<img class="food_thumbnail" src="{{pate.image.url}}" alt="pate {{pate.nom}} thumbnail">{% endif %}  
+                
+                            <div class="food_name">
+                                <div class="name">{{pate.nom|capfirst}}
+                                    <i class="fas fa-info-circle tooltip">
+                                        <span class="tooltiptext"> 
+                                        {% if not pate.allergene.all %} Aucun allergène{% else %}Allergènes:{% endif %}
+                                        {% for allergene in pate.allergene.all %}
+                                            {{allergene.nom|capfirst}}{% if not forloop.last %}, {% endif %}
+                                        {% endfor %}
+                                        </span>
+                                    </i>
+                                </div>
+                            </div>  
+                            {% if not pizza.image %}<div class="food_fix"></div>{% endif %} 
+                            <div class="price">
+                                <div>{{pate.prix|floatformat:2 }} €</div>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="infos_suppl">
+                <p> Tagliatelle ou tortellini: +0,50 €</p>
+                <p> Suppléments pâtes gratinées, gruyère, parmesan: +2,00 €</p>
+            </div>
+
+            <div id="desserts" class="foodTypeContainer">
+                <h2>Desserts Maison</h2>
+                <div class="foodlist">
+                    {% for dessert in desserts %}
+                    <div class="foodseparator">
+                        <div class="food">
+                            <div class="food_image">
+                                {% if dessert.image %}<img src="{{dessert.image.url}}" alt="dessert {{dessert.nom}}">{% endif %} 
+                            </div>
+                            {% if dessert.image %}<img class="food_thumbnail" src="{{dessert.image.url}}" alt="dessert {{dessert.nom}} thumbnail">{% endif %}  
+                            <div class="food_name">
+                                <div class="name">{{dessert.nom|capfirst}}
+                                    <i class="fas fa-info-circle tooltip">
+                                        <span class="tooltiptext"> 
+                                        {% if not dessert.allergene.all %}
+                                        
+                                        Aucun allergène{% else %}Allergènes:{% endif %}
+                                        {% for allergene in dessert.allergene.all %}
+                                            {{allergene.nom|capfirst}}{% if not forloop.last %}, {% endif %}
+                                        {% endfor %}
+                                        </span>
+                                    </i>
+                                </div>
+                            </div>  
+                            {% if not pizza.image %}<div class="food_fix"></div>{% endif %} 
+                            <div class="price">
+                                <div>{{dessert.prix|floatformat:2 }} €</div>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+
+            <div id="boissons" class="foodTypeContainer">
+                <h2>Boissons</h2>
+                <div class="foodlist">
+                    {% for boisson in boissons %}
+                    <div class="foodseparator">
+                        <div class="food">
+                            <div class="food_image">
+                                {% if boisson.image %}<img src="{{boisson.image.url}}" alt="boisson {{boisson.nom}}">{% endif %} 
+                            </div>
+                            {% if boisson.image %}<img class="food_thumbnail" src="{{boisson.image.url}}" alt="boisson {{boisson.nom}} thumbnail">{% endif %}  
+                
+                            <div class="food_name">
+                                <div class="name">{{boisson.nom|capfirst}}
+                                    <i class="fas fa-info-circle tooltip">
+                                        <span class="tooltiptext"> 
+                                        {% if not boisson.allergene.all %} Aucun allergène{% else %}Allergènes:{% endif %}
+                                        {% for allergene in boisson.allergene.all %}
+                                            {{allergene.nom|capfirst}}{% if not forloop.last %}, {% endif %}
+                                        {% endfor %}
+                                        </span>
+                                    </i>
+                                </div>
+                            </div>  
+                            {% if not pizza.image %}<div class="food_fix"></div>{% endif %} 
+                            <div class="price">
+                                <div>{{boisson.prix|floatformat:2 }} €</div>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+    const thumbnails = document.querySelectorAll('.food_thumbnail');
+    thumbnails.forEach(thumbnail => {
+        thumbnail.addEventListener('click', function handleClick(event) {
+            var div = thumbnail.parentElement.querySelector('.food_image');
+            div.style.display = 'flex';
+            div.addEventListener('click', function handleClick(event) {
+                div.style.display = 'none'
+            });
+        });
+    });
+</script>
+{% endblock %}

@@ -1,0 +1,146 @@
+/* Extra small devices (phones, 600px and down) */
+.contact .success_contact{
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 25px 0;
+    text-align: center;
+}
+
+.contact .success_contact h3{
+    color: var(--colorRed);
+    font-size: var(--h2SizeXS);
+}
+
+.contact .success_contact p{
+    color: var(--colorWhite);
+    font-size: var(--pSizeXS);
+}
+
+.contact .container{
+    padding: 0 15px 50px 15px;
+    margin: 0;
+    background-color: var(--colorDarkGrey);
+    color: var(--colorWhite);
+    box-shadow: 0px 4px 10px 5px #444;
+}
+
+.contact .container h2{
+    font-weight: 600;
+    font-size: var(--h2SizeXS);
+    border-bottom: 2px solid var(--colorRed);
+    margin-bottom: 10px;
+}
+
+.contact .contact_header{  
+    padding: 20px 0;
+}
+
+.contact .contact_header p{  
+    font-size: var(--pSizeXS);
+}
+
+.contact .fieldWrapper{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.contact .fieldWrapper label{
+    font-weight: 500;
+    font-size: var(--pSizeXS);
+}
+
+.contact .fieldWrapper input{
+    padding: 5px 10px;
+    border-radius: 45px;
+    border-width: 1px;
+    border-style: solid;
+}
+
+.contact .fieldWrapper textarea{
+    padding: 5px 10px;
+    min-height: 150px;
+    resize:vertical;
+    border-radius: 15px;
+}
+
+.contact form input[type=submit]{
+    display: block;
+    margin: auto;
+    padding: 10px 50px;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 45px;
+    font-weight: 800;
+    box-shadow: 0px 3px 3px 3px #181818;
+}
+
+@media (hover: hover) {
+    .contact form input[type=submit]:hover{
+        background-color: #aaa;
+        color: var(--colorWhite)
+    }
+
+    .contact form input[type=submit]:active{
+        transform: translateY(5px);
+        box-shadow: none;
+    }
+}
+
+@media (hover: none) {
+    .contact form input[type=submit]:active{
+        background-color: #aaa;
+        color: var(--colorWhite);
+        transform: translateY(5px);
+        box-shadow: none;
+    }
+}
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+
+}
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+
+}
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+
+}
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    .contact .success_contact h3{
+        font-size: var(--h2SizeXL);
+    }
+
+    .contact .success_contact p{
+        font-size: var(--pSizeXL);
+    }
+
+    .contact .container{
+        padding: 0 125px 50px 125px;
+        margin: 25px auto;
+        border-radius: 15px;
+    }
+
+    .contact .container h2{
+        font-size: var(--h2SizeXL);
+    }
+
+    .contact .contact_header p{  
+        font-size: var(--pSizeXL);
+        padding-bottom: 25px;
+    }
+
+    .contact .fieldWrapper{
+        margin-bottom: 15px;
+    }
+
+    .contact .fieldWrapper label{
+        font-size: var(--pSizeXL);
+    }
+    
+    .contact .fieldWrapper textarea{
+        min-height: 300px;
+    }
+}
