@@ -137,10 +137,13 @@ EMAIL_HOST_USER = config('EMAIL_HOST_USER')
 EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')
 
 # Cloudinary
-CLOUDINARY_STORAGE = {
-    'CLOUD_NAME': 'hrf71qwlv',
-    'API_KEY': '843353311626859',
-    'API_SECRET': 'kFJmVDNaCbzq2KDPWNKkL748KAM',
-}
-DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+import cloudinary
+cloudinary.config(
+  cloud_name = config('CLOUD_NAME'),
+  api_key = config('CLOUD_API_KEY'),
+  api_secret = config('CLOUD_API_SECRET'),
+  api_proxy = "http://proxy.server:3128"
+)
+import cloudinary.uploader
+import cloudinary.api
 
