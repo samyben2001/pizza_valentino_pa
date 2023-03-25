@@ -1,0 +1,2610 @@
+{% extends 'menu/base.html' %}
+{% load static %}
+
+{% block extrahead %}
+    <title>La carte - Pizzeria Valentino Gembloux</title>
+    <meta name="description"  content="Découvrez notre carte: d'excellentes pizzas, pâtes et d'incroyables desserts fait maison. Nous livrons dans un rayon de 10km, à partir de 16€">
+    <link rel="stylesheet" href="{% static 'menu/styles/menu.css' %}">
+{% endblock %}
+
+{% block content %}
+    <div class="menu">
+        <div class="foodbooking_div">
+            <a class="foodbooking_link" href="https://www.foodbooking.com/ordering/restaurant/menu?company_uid=cfa829ec-f0ed-4d5a-a81b-4d323c6854d2&restaurant_uid=cae7ef12-c4dc-46aa-aad0-7b49dacbda07">Commander en ligne</a>
+        </div>
+        <div class="container">
+            <div class="menu_nav">
+                <a href="#entrees"><div>Entrées</div></a>
+                <a href="#pizzas"><div>Pizzas</div></a>
+                <a href="#pates"><div>Pâtes</div></a>
+                <a href="#desserts"><div>Desserts</div></a>
+                <a href="#boissons"><div>Boissons</div></a>
+            </div>
+
+            <div id="entrees" class="foodTypeContainer">
+                <h2>Entrées</h2>
+                <div class="foodlist">
+                    
+                    <div class="foodseparator">
+                        <div class="food">
+                            <div class="food_image">
+                                 
+                            </div>
+                              
+                
+                            <div class="food_name">
+                                <div class="name">Pain à l'ail
+                                    <i class="fas fa-info-circle tooltip" aria-hidden="true">
+                                        <span class="tooltiptext"> 
+                                        Allergènes:
+                                        
+                                            Gluten
+                                        
+                                        </span>
+                                    </i>
+                                </div>
+                            </div>  
+                            <div class="food_fix"></div> 
+                            <div class="price">
+                                <div>6,00 €</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="foodseparator">
+                        <div class="food">
+                            <div class="food_image">
+                                 
+                            </div>
+                              
+                
+                            <div class="food_name">
+                                <div class="name">Pain à l'ail avec lardons
+                                    <i class="fas fa-info-circle tooltip" aria-hidden="true">
+                                        <span class="tooltiptext"> 
+                                        Allergènes:
+                                        
+                                            Gluten
+                                        
+                                        </span>
+                                    </i>
+                                </div>
+                            </div>  
+                            <div class="food_fix"></div> 
+                            <div class="price">
+                                <div>8,00 €</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div id="pizzas" class="foodTypeContainer">
+                <h2>Pizzas</h2>
+                <div class="foodlist">
+                    
+                    <div class="foodseparator">
+                        <div class="food">
+                            <div class="food_name">
+                                <div class="suggestion">Suggestion !</div>
+                                <div class="name">Pizza Originelle
+                                    <i class="fas fa-info-circle tooltip" aria-hidden="true">
+                                        <span class="tooltiptext"> 
+                                        Allergènes:
+                                        
+                                            Gluten, 
+                                        
+                                            Lait (lactose)
+                                        
+                                        </span>
+                                    </i>
+                                </div>
+                            </div>  
+                             
+                            <div class="price">
+                                
+                                <div>13,00 €</div>
+                            </div>
+                        </div>
+                
+                        <div class="ingredients">
+                            
+                                Base tomatée,
+                            
+                                mozzarella, 
+                            
+                                saucisse chipolata, 
+                            
+                                lardons, 
+                            
+                                poivrons vert,rouge,jaune,
+
+                                oignons,
+                                
+                                origan
+                                    
+                        </div>
+                    </div>
+                    
+                    <div class="foodseparator">
+                        <div class="food">
+                            <div class="food_name">
+                                
+                                <div class="name">Marguerita
+                                    <i class="fas fa-info-circle tooltip" aria-hidden="true">
+                                        <span class="tooltiptext"> 
+                                        Allergènes:
+                                        
+                                            Gluten, 
+                                        
+                                            Lait (lactose)
+                                        
+                                        </span>
+                                    </i>
+                                </div>
+                            </div>  
+                             
+                            <div class="price">
+                                
+                                <div>9,00 €</div>
+                            </div>
+                        </div>
+                
+                        <div class="ingredients">
+                            
+                                tomate, 
+                            
+                                mozzarella, 
+                            
+                                origan
+                                    
+                        </div>
+                    </div>
+                    
+                    <div class="foodseparator">
+                        <div class="food">
+                            <div class="food_image">
+                                 
+                            </div>
+                              
+                            <div class="food_name">
+                                
+                                <div class="name">Bolognese
+                                    <i class="fas fa-info-circle tooltip" aria-hidden="true">
+                                        <span class="tooltiptext"> 
+                                        Allergènes:
+                                        
+                                            Gluten, 
+                                        
+                                            Lait (lactose)
+                                        
+                                        </span>
+                                    </i>
+                                </div>
+                            </div>  
+                            <div class="food_fix"></div> 
+                            <div class="price">
+                                
+                                <div>10,00 €</div>
+                            </div>
+                        </div>
+                
+                        <div class="ingredients">
+                            
+                                sauce bolognèse maison, 
+                            
+                                mozzarella, 
+                            
+                                origan
+                                    
+                        </div>
+                    </div>
+                    
+                    <div class="foodseparator">
+                        <div class="food">
+                            <div class="food_name">
+                                
+                                <div class="name">Funghi
+                                    <i class="fas fa-info-circle tooltip" aria-hidden="true">
+                                        <span class="tooltiptext"> 
+                                        Allergènes:
+                                        
+                                            Gluten, 
+                                        
+                                            Lait (lactose)
+                                        
+                                        </span>
+                                    </i>
+                                </div>
+                            </div>  
+                             
+                            <div class="price">
+                                
+                                <div>10,00 €</div>
+                            </div>
+                        </div>
+                
+                        <div class="ingredients">
+                            
+                                tomate, 
+                            
+                                mozzarella, 
+                            
+                                origan, 
+                            
+                                champignons
+                                    
+                        </div>
+                    </div>
+                    
+                    <div class="foodseparator">
+                        <div class="food">
+                            <div class="food_name">
+                                
+                                <div class="name">Napoli
+                                    <i class="fas fa-info-circle tooltip" aria-hidden="true">
+                                        <span class="tooltiptext"> 
+                                        Allergènes:
+                                        
+                                            Gluten, 
+                                        
+                                            Poisson, 
+                                        
+                                            Lait (lactose)
+                                        
+                                        </span>
+                                    </i>
+                                </div>
+                            </div>  
+                             
+                            <div class="price">
+                                
+                                <div>10,00 €</div>
+                            </div>
+                        </div>
+                
+                        <div class="ingredients">
+                            
+                                tomate, 
+                            
+                                mozzarella, 
+                            
+                                câpres, 
+                            
+                                origan, 
+                            
+                                anchois
+                                    
+                        </div>
+                    </div>
+                    
+                    <div class="foodseparator">
+                        <div class="food">
+                            <div class="food_name">
+                                
+                                <div class="name">Prosciutto
+                                    <i class="fas fa-info-circle tooltip" aria-hidden="true">
+                                        <span class="tooltiptext"> 
+                                        Allergènes:
+                                        
+                                            Gluten, 
+                                        
+                                            Lait (lactose)
+                                        
+                                        </span>
+                                    </i>
+                                </div>
+                            </div>  
+                             
+                            <div class="price">
+                                
+                                <div>10,00 €</div>
+                            </div>
+                        </div>
+                
+                        <div class="ingredients">
+                            
+                                tomate, 
+                            
+                                mozzarella, 
+                            
+                                jambon, 
+                            
+                                origan
+                                    
+                        </div>
+                    </div>
+                    
+                    <div class="foodseparator">
+                        <div class="food">
+                            <div class="food_name">
+                                
+                                <div class="name">Hawaï
+                                    <i class="fas fa-info-circle tooltip" aria-hidden="true">
+                                        <span class="tooltiptext"> 
+                                        Allergènes:
+                                        
+                                            Gluten, 
+                                        
+                                            Lait (lactose)
+                                        
+                                        </span>
+                                    </i>
+                                </div>
+                            </div>  
+                             
+                            <div class="price">
+                                
+                                <div>11,00 €</div>
+                            </div>
+                        </div>
+                
+                        <div class="ingredients">
+                            
+                                tomate, 
+                            
+                                mozzarella, 
+                            
+                                jambon, 
+                            
+                                origan, 
+                            
+                                ananas
+                                    
+                        </div>
+                    </div>
+                    
+                    <div class="foodseparator">
+                        <div class="food">
+                            <div class="food_name">
+                                
+                                <div class="name">Regina
+                                    <i class="fas fa-info-circle tooltip" aria-hidden="true">
+                                        <span class="tooltiptext"> 
+                                        Allergènes:
+                                        
+                                            Gluten, 
+                                        
+                                            Lait (lactose)
+                                        
+                                        </span>
+                                    </i>
+                                </div>
+                            </div>  
+                             
+                            <div class="price">
+                                
+                                <div>11,00 €</div>
+                            </div>
+                        </div>
+                
+                        <div class="ingredients">
+                            
+                                tomate, 
+                            
+                                mozzarella, 
+                            
+                                jambon, 
+                            
+                                origan, 
+                            
+                                champignons
+                                    
+                        </div>
+                    </div>
+                    
+                    <div class="foodseparator">
+                        <div class="food">
+                            <div class="food_name">
+                                
+                                <div class="name">Salami
+                                    <i class="fas fa-info-circle tooltip" aria-hidden="true">
+                                        <span class="tooltiptext"> 
+                                        Allergènes:
+                                        
+                                            Gluten, 
+                                        
+                                            Lait (lactose)
+                                        
+                                        </span>
+                                    </i>
+                                </div>
+                            </div>  
+                             
+                            <div class="price">
+                                
+                                <div>11,00 €</div>
+                            </div>
+                        </div>
+                
+                        <div class="ingredients">
+                            
+                                tomate, 
+                            
+                                mozzarella, 
+                            
+                                salami, 
+                            
+                                origan
+                                    
+                        </div>
+                    </div>
+                    
+                    <div class="foodseparator">
+                        <div class="food"> 
+                            <div class="food_name">
+                                
+                                <div class="name">Sole Mio
+                                    <i class="fas fa-info-circle tooltip" aria-hidden="true">
+                                        <span class="tooltiptext"> 
+                                        Allergènes:
+                                        
+                                            Gluten, 
+                                        
+                                            Oeuf, 
+                                        
+                                            Lait (lactose)
+                                        
+                                        </span>
+                                    </i>
+                                </div>
+                            </div>  
+                             
+                            <div class="price">
+                                
+                                <div>11,00 €</div>
+                            </div>
+                        </div>
+                
+                        <div class="ingredients">
+                            
+                                tomate, 
+                            
+                                mozzarella, 
+                            
+                                jambon, 
+                            
+                                oeufs, 
+                            
+                                origan
+                                    
+                        </div>
+                    </div>
+                    
+                    <div class="foodseparator">
+                        <div class="food">
+                            <div class="food_name">
+                                
+                                <div class="name">Viennese
+                                    <i class="fas fa-info-circle tooltip" aria-hidden="true">
+                                        <span class="tooltiptext"> 
+                                        Allergènes:
+                                        
+                                            Gluten, 
+                                        
+                                            Lait (lactose)
+                                        
+                                        </span>
+                                    </i>
+                                </div>
+                            </div>  
+                             
+                            <div class="price">
+                                
+                                <div>11,00 €</div>
+                            </div>
+                        </div>
+                
+                        <div class="ingredients">
+                            
+                                tomate, 
+                            
+                                mozzarella, 
+                            
+                                saucisses viennoises, 
+                            
+                                origan, 
+                            
+                                oignons
+                                    
+                        </div>
+                    </div>
+                    
+                    <div class="foodseparator">
+                        <div class="food">
+                            <div class="food_name">
+                                
+                                <div class="name">Calzone (pizza fermée)
+                                    <i class="fas fa-info-circle tooltip" aria-hidden="true">
+                                        <span class="tooltiptext"> 
+                                        Allergènes:
+                                        
+                                            Gluten, 
+                                        
+                                            Oeuf, 
+                                        
+                                            Lait (lactose)
+                                        
+                                        </span>
+                                    </i>
+                                </div>
+                            </div>  
+                             
+                            <div class="price">
+                                
+                                <div>11,00 €</div>
+                            </div>
+                        </div>
+                
+                        <div class="ingredients">
+                            
+                                tomate, 
+                            
+                                mozzarella, 
+                            
+                                jambon, 
+                            
+                                oeufs, 
+                            
+                                origan, 
+                            
+                                champignons
+                                    
+                        </div>
+                    </div>
+                    
+                    <div class="foodseparator">
+                        <div class="food">
+                            <div class="food_name">
+                                
+                                <div class="name">4 Formaggi
+                                    <i class="fas fa-info-circle tooltip" aria-hidden="true">
+                                        <span class="tooltiptext"> 
+                                        Allergènes:
+                                        
+                                            Gluten, 
+                                        
+                                            Lait (lactose)
+                                        
+                                        </span>
+                                    </i>
+                                </div>
+                            </div>  
+                             
+                            <div class="price">
+                                
+                                <div>12,00 €</div>
+                            </div>
+                        </div>
+                
+                        <div class="ingredients">
+                            
+                                tomate, 
+                            
+                                mozzarella, 
+                            
+                                gorgonzola, 
+                            
+                                tallegio, 
+                            
+                                parmesan, 
+                            
+                                origan
+                                    
+                        </div>
+                    </div>
+                    
+                    <div class="foodseparator">
+                        <div class="food">
+                            <div class="food_name">
+                                
+                                <div class="name">4 Stagioni
+                                    <i class="fas fa-info-circle tooltip" aria-hidden="true">
+                                        <span class="tooltiptext"> 
+                                        Allergènes:
+                                        
+                                            Gluten, 
+                                        
+                                            Lait (lactose)
+                                        
+                                        </span>
+                                    </i>
+                                </div>
+                            </div>  
+                             
+                            <div class="price">
+                                
+                                <div>12,00 €</div>
+                            </div>
+                        </div>
+                
+                        <div class="ingredients">
+                            
+                                tomate, 
+                            
+                                mozzarella, 
+                            
+                                jambon, 
+                            
+                                salami, 
+                            
+                                origan, 
+                            
+                                champignons, 
+                            
+                                artichauts
+                                    
+                        </div>
+                    </div>
+                    
+                    <div class="foodseparator">
+                        <div class="food">
+                            <div class="food_name">
+                                
+                                <div class="name">Al Capone
+                                    <i class="fas fa-info-circle tooltip" aria-hidden="true">
+                                        <span class="tooltiptext"> 
+                                        Allergènes:
+                                        
+                                            Gluten, 
+                                        
+                                            Oeuf, 
+                                        
+                                            Poisson, 
+                                        
+                                            Lait (lactose)
+                                        
+                                        </span>
+                                    </i>
+                                </div>
+                            </div>  
+                             
+                            <div class="price">
+                                
+                                <div>12,00 €</div>
+                            </div>
+                        </div>
+                
+                        <div class="ingredients">
+                            
+                                tomate, 
+                            
+                                mozzarella, 
+                            
+                                jambon, 
+                            
+                                poivrons, 
+                            
+                                oeufs durs, 
+                            
+                                origan, 
+                            
+                                anchois, 
+                            
+                                ail
+                                    
+                        </div>
+                    </div>
+                    
+                    <div class="foodseparator">
+                        <div class="food">
+                            <div class="food_image">
+                                 
+                            </div>
+                              
+                            <div class="food_name">
+                                
+                                <div class="name">Capricciosa
+                                    <i class="fas fa-info-circle tooltip" aria-hidden="true">
+                                        <span class="tooltiptext"> 
+                                        Allergènes:
+                                        
+                                            Gluten, 
+                                        
+                                            Poisson, 
+                                        
+                                            Lait (lactose)
+                                        
+                                        </span>
+                                    </i>
+                                </div>
+                            </div>  
+                            <div class="food_fix"></div> 
+                            <div class="price">
+                                
+                                <div>12,00 €</div>
+                            </div>
+                        </div>
+                
+                        <div class="ingredients">
+                            
+                                tomate, 
+                            
+                                mozzarella, 
+                            
+                                jambon, 
+                            
+                                olives, 
+                            
+                                origan, 
+                            
+                                anchois, 
+                            
+                                champignons
+                                    
+                        </div>
+                    </div>
+                    
+                    <div class="foodseparator">
+                        <div class="food">
+                            <div class="food_name">
+                                
+                                <div class="name">Chorizo
+                                    <i class="fas fa-info-circle tooltip" aria-hidden="true">
+                                        <span class="tooltiptext"> 
+                                        Allergènes:
+                                        
+                                            Gluten, 
+                                        
+                                            Lait (lactose)
+                                        
+                                        </span>
+                                    </i>
+                                </div>
+                            </div>  
+                             
+                            <div class="price">
+                                
+                                <div>12,00 €</div>
+                            </div>
+                        </div>
+                
+                        <div class="ingredients">
+                            
+                                tomate, 
+                            
+                                mozzarella, 
+                            
+                                poivrons, 
+                            
+                                chorizo, 
+                            
+                                origan
+                                    
+                        </div>
+                    </div>
+                    
+                    <div class="foodseparator">
+                        <div class="food">
+                            <div class="food_name">
+                                
+                                <div class="name">Chèvre
+                                    <i class="fas fa-info-circle tooltip" aria-hidden="true">
+                                        <span class="tooltiptext"> 
+                                        Allergènes:
+                                        
+                                            Gluten, 
+                                        
+                                            Lait (lactose)
+                                        
+                                        </span>
+                                    </i>
+                                </div>
+                            </div>  
+                             
+                            <div class="price">
+                                
+                                <div>12,00 €</div>
+                            </div>
+                        </div>
+                
+                        <div class="ingredients">
+                            
+                                tomate, 
+                            
+                                mozzarella, 
+                            
+                                fromage de chèvre, 
+                            
+                                lardons, 
+                            
+                                origan, 
+                            
+                                miel
+                                    
+                        </div>
+                    </div>
+                    
+                    <div class="foodseparator">
+                        <div class="food">
+                            <div class="food_name">
+                                
+                                <div class="name">Donatella
+                                    <i class="fas fa-info-circle tooltip" aria-hidden="true">
+                                        <span class="tooltiptext"> 
+                                        Allergènes:
+                                        
+                                            Gluten, 
+                                        
+                                            Lait (lactose)
+                                        
+                                        </span>
+                                    </i>
+                                </div>
+                            </div>  
+                             
+                            <div class="price">
+                                
+                                <div>12,00 €</div>
+                            </div>
+                        </div>
+                
+                        <div class="ingredients">
+                            
+                                tomate, 
+                            
+                                mozzarella, 
+                            
+                                tomate cerise, 
+                            
+                                mozzarella fraiche, 
+                            
+                                basilic frais
+                                    
+                        </div>
+                    </div>
+                    
+                    <div class="foodseparator">
+                        <div class="food">
+                            <div class="food_name">
+                                
+                                <div class="name">Emilio
+                                    <i class="fas fa-info-circle tooltip" aria-hidden="true">
+                                        <span class="tooltiptext"> 
+                                        Allergènes:
+                                        
+                                            Gluten, 
+                                        
+                                            Lait (lactose)
+                                        
+                                        </span>
+                                    </i>
+                                </div>
+                            </div>  
+                             
+                            <div class="price">
+                                
+                                <div>12,00 €</div>
+                            </div>
+                        </div>
+                
+                        <div class="ingredients">
+                            
+                                tomate, 
+                            
+                                mozzarella, 
+                            
+                                jambon, 
+                            
+                                épinards, 
+                            
+                                origan, 
+                            
+                                oignons
+                                    
+                        </div>
+                    </div>
+                    
+                    <div class="foodseparator">
+                        <div class="food">
+                            <div class="food_name">
+                                
+                                <div class="name">Luca
+                                    <i class="fas fa-info-circle tooltip" aria-hidden="true">
+                                        <span class="tooltiptext"> 
+                                        Allergènes:
+                                        
+                                            Gluten, 
+                                        
+                                            Oeuf, 
+                                        
+                                            Lait (lactose)
+                                        
+                                        </span>
+                                    </i>
+                                </div>
+                            </div>  
+                             
+                            <div class="price">
+                                
+                                <div>12,00 €</div>
+                            </div>
+                        </div>
+                
+                        <div class="ingredients">
+                            
+                                tomate, 
+                            
+                                mozzarella, 
+                            
+                                jambon, 
+                            
+                                salami, 
+                            
+                                oeufs durs, 
+                            
+                                origan, 
+                            
+                                oignons
+                                    
+                        </div>
+                    </div>
+                    
+                    <div class="foodseparator">
+                        <div class="food"> 
+                            <div class="food_name">
+                                
+                                <div class="name">Ortolana
+                                    <i class="fas fa-info-circle tooltip" aria-hidden="true">
+                                        <span class="tooltiptext"> 
+                                        Allergènes:
+                                        
+                                            Gluten, 
+                                        
+                                            Lait (lactose)
+                                        
+                                        </span>
+                                    </i>
+                                </div>
+                            </div>  
+                             
+                            <div class="price">
+                                
+                                <div>12,00 €</div>
+                            </div>
+                        </div>
+                
+                        <div class="ingredients">
+                            
+                                tomate, 
+                            
+                                mozzarella, 
+                            
+                                aubergines, 
+                            
+                                origan, 
+                            
+                                oignons, 
+                            
+                                copeaux de parmesan
+                                    
+                        </div>
+                    </div>
+                    
+                    <div class="foodseparator">
+                        <div class="food">
+                            <div class="food_name">
+                                
+                                <div class="name">Sara
+                                    <i class="fas fa-info-circle tooltip" aria-hidden="true">
+                                        <span class="tooltiptext"> 
+                                        Allergènes:
+                                        
+                                            Gluten, 
+                                        
+                                            Poisson, 
+                                        
+                                            Lait (lactose)
+                                        
+                                        </span>
+                                    </i>
+                                </div>
+                            </div>  
+                             
+                            <div class="price">
+                                
+                                <div>12,00 €</div>
+                            </div>
+                        </div>
+                
+                        <div class="ingredients">
+                            
+                                crème, 
+                            
+                                mozzarella, 
+                            
+                                4 fromages, 
+                            
+                                origan, 
+                            
+                                anchois, 
+                            
+                                oignons
+                                    
+                        </div>
+                    </div>
+                    
+                    <div class="foodseparator">
+                        <div class="food">
+                            <div class="food_image">
+                                 
+                            </div>
+                              
+                            <div class="food_name">
+                                
+                                <div class="name">Valentino
+                                    <i class="fas fa-info-circle tooltip" aria-hidden="true">
+                                        <span class="tooltiptext"> 
+                                        Allergènes:
+                                        
+                                            Gluten, 
+                                        
+                                            Lait (lactose)
+                                        
+                                        </span>
+                                    </i>
+                                </div>
+                            </div>  
+                            <div class="food_fix"></div> 
+                            <div class="price">
+                                
+                                <div>12,00 €</div>
+                            </div>
+                        </div>
+                
+                        <div class="ingredients">
+                            
+                                tomate, 
+                            
+                                mozzarella, 
+                            
+                                surprise
+                                    
+                        </div>
+                    </div>
+                    
+                    <div class="foodseparator">
+                        <div class="food">
+                            <div class="food_name">
+                                
+                                <div class="name">Al Tonno
+                                    <i class="fas fa-info-circle tooltip" aria-hidden="true">
+                                        <span class="tooltiptext"> 
+                                        Allergènes:
+                                        
+                                            Gluten, 
+                                        
+                                            Poisson, 
+                                        
+                                            Lait (lactose)
+                                        
+                                        </span>
+                                    </i>
+                                </div>
+                            </div>  
+                             
+                            <div class="price">
+                                
+                                <div>12,00 €</div>
+                            </div>
+                        </div>
+                
+                        <div class="ingredients">
+                            
+                                tomate, 
+                            
+                                mozzarella, 
+                            
+                                thon, 
+                            
+                                origan, 
+                            
+                                oignons
+                                    
+                        </div>
+                    </div>
+                    
+                    <div class="foodseparator">
+                        <div class="food">
+                            <div class="food_name">
+                                
+                                <div class="name">Forestière
+                                    <i class="fas fa-info-circle tooltip" aria-hidden="true">
+                                        <span class="tooltiptext"> 
+                                        Allergènes:
+                                        
+                                            Gluten, 
+                                        
+                                            Lait (lactose)
+                                        
+                                        </span>
+                                    </i>
+                                </div>
+                            </div>  
+                             
+                            <div class="price">
+                                
+                                <div>12,00 €</div>
+                            </div>
+                        </div>
+                
+                        <div class="ingredients">
+                            
+                                tomate, 
+                            
+                                mozzarella, 
+                            
+                                lardons, 
+                            
+                                origan, 
+                            
+                                champignons, 
+                            
+                                oignons
+                                    
+                        </div>
+                    </div>
+                    
+                    <div class="foodseparator">
+                        <div class="food">
+                            <div class="food_name">
+                                
+                                <div class="name">Maria
+                                    <i class="fas fa-info-circle tooltip" aria-hidden="true">
+                                        <span class="tooltiptext"> 
+                                        Allergènes:
+                                        
+                                            Gluten, 
+                                        
+                                            Lait (lactose)
+                                        
+                                        </span>
+                                    </i>
+                                </div>
+                            </div>  
+                             
+                            <div class="price">
+                                
+                                <div>12,00 €</div>
+                            </div>
+                        </div>
+                
+                        <div class="ingredients">
+                            
+                                tomate, 
+                            
+                                mozzarella, 
+                            
+                                aubergines, 
+                            
+                                jambon de parme, 
+                            
+                                origan
+                                    
+                        </div>
+                    </div>
+                    
+                    <div class="foodseparator">
+                        <div class="food">
+                            <div class="food_name">
+                                
+                                <div class="name">Merguez
+                                    <i class="fas fa-info-circle tooltip" aria-hidden="true">
+                                        <span class="tooltiptext"> 
+                                        Allergènes:
+                                        
+                                            Gluten, 
+                                        
+                                            Lait (lactose)
+                                        
+                                        </span>
+                                    </i>
+                                </div>
+                            </div>  
+                             
+                            <div class="price">
+                                
+                                <div>12,00 €</div>
+                            </div>
+                        </div>
+                
+                        <div class="ingredients">
+                            
+                                tomate, 
+                            
+                                mozzarella, 
+                            
+                                poivrons, 
+                            
+                                merguez, 
+                            
+                                origan
+                                    
+                        </div>
+                    </div>
+                    
+                    <div class="foodseparator">
+                        <div class="food">
+                            <div class="food_name">
+                                
+                                <div class="name">Nicola
+                                    <i class="fas fa-info-circle tooltip" aria-hidden="true">
+                                        <span class="tooltiptext"> 
+                                        Allergènes:
+                                        
+                                            Gluten, 
+                                        
+                                            Lait (lactose)
+                                        
+                                        </span>
+                                    </i>
+                                </div>
+                            </div>  
+                             
+                            <div class="price">
+                                
+                                <div>12,00 €</div>
+                            </div>
+                        </div>
+                
+                        <div class="ingredients">
+                            
+                                bolognèse, 
+                            
+                                mozzarella, 
+                            
+                                maccheronis, 
+                            
+                                origan
+                                    
+                        </div>
+                    </div>
+                    
+                    <div class="foodseparator">
+                        <div class="food"> 
+                            <div class="food_name">
+                                
+                                <div class="name">Carbonara
+                                    <i class="fas fa-info-circle tooltip" aria-hidden="true">
+                                        <span class="tooltiptext"> 
+                                        Allergènes:
+                                        
+                                            Gluten, 
+                                        
+                                            Oeuf, 
+                                        
+                                            Lait (lactose)
+                                        
+                                        </span>
+                                    </i>
+                                </div>
+                            </div>  
+                             
+                            <div class="price">
+                                
+                                <div>13,00 €</div>
+                            </div>
+                        </div>
+                
+                        <div class="ingredients">
+                            
+                                crème assaisonnée, 
+                            
+                                mozzarella, 
+                            
+                                pancetta, 
+                            
+                                oeuf sur le plat, 
+                            
+                                persil frais, 
+                            
+                                copeaux de parmesan
+                                    
+                        </div>
+                    </div>
+                    
+                    <div class="foodseparator">
+                        <div class="food">
+                            <div class="food_name">
+                                
+                                <div class="name">Frutti Di Mare
+                                    <i class="fas fa-info-circle tooltip" aria-hidden="true">
+                                        <span class="tooltiptext"> 
+                                        Allergènes:
+                                        
+                                            Gluten, 
+                                        
+                                            Crustacés, 
+                                        
+                                            Poisson, 
+                                        
+                                            Lait (lactose)
+                                        
+                                        </span>
+                                    </i>
+                                </div>
+                            </div>  
+                             
+                            <div class="price">
+                                
+                                <div>13,00 €</div>
+                            </div>
+                        </div>
+                
+                        <div class="ingredients">
+                            
+                                tomate, 
+                            
+                                mozzarella, 
+                            
+                                moules, 
+                            
+                                crevettes, 
+                            
+                                calamars, 
+                            
+                                origan
+                                    
+                        </div>
+                    </div>
+                    
+                    <div class="foodseparator">
+                        <div class="food">
+                            <div class="food_name">
+                                
+                                <div class="name">Salmone
+                                    <i class="fas fa-info-circle tooltip" aria-hidden="true">
+                                        <span class="tooltiptext"> 
+                                        Allergènes:
+                                        
+                                            Gluten, 
+                                        
+                                            Poisson, 
+                                        
+                                            Lait (lactose)
+                                        
+                                        </span>
+                                    </i>
+                                </div>
+                            </div>  
+                             
+                            <div class="price">
+                                
+                                <div>13,00 €</div>
+                            </div>
+                        </div>
+                
+                        <div class="ingredients">
+                            
+                                tomate, 
+                            
+                                mozzarella, 
+                            
+                                saumon, 
+                            
+                                origan, 
+                            
+                                ail
+                                    
+                        </div>
+                    </div>
+                    
+                    <div class="foodseparator">
+                        <div class="food"> 
+                            <div class="food_name">
+                                
+                                <div class="name">Al Pistacchio
+                                    <i class="fas fa-info-circle tooltip" aria-hidden="true">
+                                        <span class="tooltiptext"> 
+                                        Allergènes:
+                                        
+                                            Gluten, 
+                                        
+                                            Lait (lactose), 
+                                        
+                                            Arachides
+                                        
+                                        </span>
+                                    </i>
+                                </div>
+                            </div>  
+                             
+                            <div class="price">
+                                
+                                <div>13,00 €</div>
+                            </div>
+                        </div>
+                
+                        <div class="ingredients">
+                            
+                                crème de pistaches maison, 
+                            
+                                mozzarella, 
+                            
+                                jambon, 
+                            
+                                oignons
+                                    
+                        </div>
+                    </div>
+                    
+                    <div class="foodseparator">
+                        <div class="food">
+                            <div class="food_name">
+                                
+                                <div class="name">Alla Rucola
+                                    <i class="fas fa-info-circle tooltip" aria-hidden="true">
+                                        <span class="tooltiptext"> 
+                                        Allergènes:
+                                        
+                                            Gluten, 
+                                        
+                                            Lait (lactose)
+                                        
+                                        </span>
+                                    </i>
+                                </div>
+                            </div>  
+                             
+                            <div class="price">
+                                
+                                <div>13,00 €</div>
+                            </div>
+                        </div>
+                
+                        <div class="ingredients">
+                            
+                                tomate, 
+                            
+                                mozzarella, 
+                            
+                                tomate cerise, 
+                            
+                                jambon de parme, 
+                            
+                                roquette, 
+                            
+                                origan, 
+                            
+                                copeaux de parmesan, 
+                            
+                                crème balsamique
+                                    
+                        </div>
+                    </div>
+                    
+                    <div class="foodseparator">
+                        <div class="food">
+                            <div class="food_name">
+                                
+                                <div class="name">Barbecue
+                                    <i class="fas fa-info-circle tooltip" aria-hidden="true">
+                                        <span class="tooltiptext"> 
+                                        Allergènes:
+                                        
+                                            Gluten, 
+                                        
+                                            Lait (lactose)
+                                        
+                                        </span>
+                                    </i>
+                                </div>
+                            </div>  
+                             
+                            <div class="price">
+                                
+                                <div>13,00 €</div>
+                            </div>
+                        </div>
+                
+                        <div class="ingredients">
+                            
+                                sauce texas, 
+                            
+                                mozzarella, 
+                            
+                                lardons, 
+                            
+                                viande hachée, 
+                            
+                                origan, 
+                            
+                                oignons
+                                    
+                        </div>
+                    </div>
+                    
+                    <div class="foodseparator">
+                        <div class="food">
+                            <div class="food_name">
+                                
+                                <div class="name">Boss
+                                    <i class="fas fa-info-circle tooltip" aria-hidden="true">
+                                        <span class="tooltiptext"> 
+                                        Allergènes:
+                                        
+                                            Gluten, 
+                                        
+                                            Lait (lactose)
+                                        
+                                        </span>
+                                    </i>
+                                </div>
+                            </div>  
+                             
+                            <div class="price">
+                                
+                                <div>13,00 €</div>
+                            </div>
+                        </div>
+                
+                        <div class="ingredients">
+                            
+                                tomate, 
+                            
+                                mozzarella, 
+                            
+                                câpres, 
+                            
+                                poivrons, 
+                            
+                                viande hachée, 
+                            
+                                origan, 
+                            
+                                oignons, 
+                            
+                                ail
+                                    
+                        </div>
+                    </div>
+                    
+                    <div class="foodseparator">
+                        <div class="food">
+                            <div class="food_name">
+                                
+                                <div class="name">Gyros
+                                    <i class="fas fa-info-circle tooltip" aria-hidden="true">
+                                        <span class="tooltiptext"> 
+                                        Allergènes:
+                                        
+                                            Gluten, 
+                                        
+                                            Lait (lactose)
+                                        
+                                        </span>
+                                    </i>
+                                </div>
+                            </div>  
+                             
+                            <div class="price">
+                                
+                                <div>13,00 €</div>
+                            </div>
+                        </div>
+                
+                        <div class="ingredients">
+                            
+                                tomate, 
+                            
+                                mozzarella, 
+                            
+                                poivrons, 
+                            
+                                viande de gyros, 
+                            
+                                origan, 
+                            
+                                oignons, 
+                            
+                                ail
+                                    
+                        </div>
+                    </div>
+                    
+                    <div class="foodseparator">
+                        <div class="food">
+                            <div class="food_name">
+                                
+                                <div class="name">Leandro
+                                    <i class="fas fa-info-circle tooltip" aria-hidden="true">
+                                        <span class="tooltiptext"> 
+                                        Allergènes:
+                                        
+                                            Gluten, 
+                                        
+                                            Lait (lactose)
+                                        
+                                        </span>
+                                    </i>
+                                </div>
+                            </div>  
+                             
+                            <div class="price">
+                                
+                                <div>13,00 €</div>
+                            </div>
+                        </div>
+                
+                        <div class="ingredients">
+                            
+                                tomate, 
+                            
+                                mozzarella, 
+                            
+                                poulet, 
+                            
+                                origan, 
+                            
+                                ananas
+                                    
+                        </div>
+                    </div>
+                    
+                    <div class="foodseparator">
+                        <div class="food">
+                            <div class="food_name">
+                                
+                                <div class="name">Royale
+                                    <i class="fas fa-info-circle tooltip" aria-hidden="true">
+                                        <span class="tooltiptext"> 
+                                        Allergènes:
+                                        
+                                            Gluten, 
+                                        
+                                            Crustacés, 
+                                        
+                                            Poisson, 
+                                        
+                                            Lait (lactose), 
+                                        
+                                            Mollusques
+                                        
+                                        </span>
+                                    </i>
+                                </div>
+                            </div>  
+                             
+                            <div class="price">
+                                
+                                <div>13,00 €</div>
+                            </div>
+                        </div>
+                
+                        <div class="ingredients">
+                            
+                                tomate, 
+                            
+                                mozzarella, 
+                            
+                                saumon, 
+                            
+                                moules, 
+                            
+                                scampis, 
+                            
+                                fruits de mer, 
+                            
+                                origan
+                                    
+                        </div>
+                    </div>
+                    
+                    <div class="foodseparator">
+                        <div class="food">  
+                            <div class="food_name">
+                                
+                                <div class="name">San Daniele
+                                    <i class="fas fa-info-circle tooltip" aria-hidden="true">
+                                        <span class="tooltiptext"> 
+                                        Allergènes:
+                                        
+                                            Gluten, 
+                                        
+                                            Lait (lactose)
+                                        
+                                        </span>
+                                    </i>
+                                </div>
+                            </div>  
+                             
+                            <div class="price">
+                                
+                                <div>13,00 €</div>
+                            </div>
+                        </div>
+                
+                        <div class="ingredients">
+                            
+                                tomate, 
+                            
+                                mozzarella, 
+                            
+                                4 fromages, 
+                            
+                                jambon de parme, 
+                            
+                                origan
+                                    
+                        </div>
+                    </div>
+                    
+                    <div class="foodseparator">
+                        <div class="food">
+                            <div class="food_name">
+                                
+                                <div class="name">Scampis
+                                    <i class="fas fa-info-circle tooltip" aria-hidden="true">
+                                        <span class="tooltiptext"> 
+                                        Allergènes:
+                                        
+                                            Gluten, 
+                                        
+                                            Crustacés, 
+                                        
+                                            Lait (lactose)
+                                        
+                                        </span>
+                                    </i>
+                                </div>
+                            </div>  
+                             
+                            <div class="price">
+                                
+                                <div>13,00 €</div>
+                            </div>
+                        </div>
+                
+                        <div class="ingredients">
+                            
+                                tomate, 
+                            
+                                mozzarella, 
+                            
+                                scampis, 
+                            
+                                origan, 
+                            
+                                ail
+                                    
+                        </div>
+                    </div>
+                    
+                    <div class="foodseparator">
+                        <div class="food">
+                            <div class="food_name">
+                                
+                                <div class="name">Tartiflette
+                                    <i class="fas fa-info-circle tooltip" aria-hidden="true">
+                                        <span class="tooltiptext"> 
+                                        Allergènes:
+                                        
+                                            Gluten, 
+                                        
+                                            Lait (lactose)
+                                        
+                                        </span>
+                                    </i>
+                                </div>
+                            </div>  
+                             
+                            <div class="price">
+                                
+                                <div>13,00 €</div>
+                            </div>
+                        </div>
+                
+                        <div class="ingredients">
+                            
+                                crème, 
+                            
+                                mozzarella, 
+                            
+                                lardons, 
+                            
+                                pommes de terre, 
+                            
+                                reblochon, 
+                            
+                                origan
+                                    
+                        </div>
+                    </div>
+                    
+                    <div class="foodseparator">
+                        <div class="food">
+                            <div class="food_name">
+                                
+                                <div class="name">Del Sole
+                                    <i class="fas fa-info-circle tooltip" aria-hidden="true">
+                                        <span class="tooltiptext"> 
+                                        Allergènes:
+                                        
+                                            Gluten, 
+                                        
+                                            Lait (lactose)
+                                        
+                                        </span>
+                                    </i>
+                                </div>
+                            </div>  
+                             
+                            <div class="price">
+                                
+                                <div>13,00 €</div>
+                            </div>
+                        </div>
+                
+                        <div class="ingredients">
+                            
+                                tomate, 
+                            
+                                mozzarella, 
+                            
+                                roquette, 
+                            
+                                mozzarella di bufala, 
+                            
+                                pancetta, 
+                            
+                                copeaux de parmesan, 
+                            
+                                huile d'olives
+                                    
+                        </div>
+                    </div>
+                    
+                    <div class="foodseparator">
+                        <div class="food"> 
+                            <div class="food_name">
+                                
+                                <div class="name">Mare E Monte
+                                    <i class="fas fa-info-circle tooltip" aria-hidden="true">
+                                        <span class="tooltiptext"> 
+                                        Allergènes:
+                                        
+                                            Gluten, 
+                                        
+                                            Crustacés, 
+                                        
+                                            Lait (lactose), 
+                                        
+                                            Mollusques
+                                        
+                                        </span>
+                                    </i>
+                                </div>
+                            </div>  
+                             
+                            <div class="price">
+                                
+                                <div>13,00 €</div>
+                            </div>
+                        </div>
+                
+                        <div class="ingredients">
+                            
+                                tomate, 
+                            
+                                mozzarella, 
+                            
+                                fruits de mer, 
+                            
+                                origan, 
+                            
+                                champignons
+                                    
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="infos_suppl">
+                <p> Suppléments au choix entre 2,00 € et 3,00 €</p>
+            </div>
+
+            <div id="pates" class="foodTypeContainer">
+                <h2>Pâtes</h2>
+                <div class="foodlist">
+                    
+                    <div class="foodseparator">
+                        <div class="food">
+                            <div class="food_image">
+                                 
+                            </div>
+                              
+                
+                            <div class="food_name">
+                                <div class="name">Bolognèse
+                                    <i class="fas fa-info-circle tooltip" aria-hidden="true">
+                                        <span class="tooltiptext"> 
+                                        Allergènes:
+                                        
+                                            Gluten
+                                        
+                                        </span>
+                                    </i>
+                                </div>
+                            </div>  
+                            <div class="food_fix"></div> 
+                            <div class="price">
+                                <div>10,00 €</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="foodseparator">
+                        <div class="food">
+                            <div class="food_image">
+                                 
+                            </div>
+                              
+                
+                            <div class="food_name">
+                                <div class="name">Napoli
+                                    <i class="fas fa-info-circle tooltip" aria-hidden="true">
+                                        <span class="tooltiptext"> 
+                                        Allergènes:
+                                        
+                                            Gluten
+                                        
+                                        </span>
+                                    </i>
+                                </div>
+                            </div>  
+                            <div class="food_fix"></div> 
+                            <div class="price">
+                                <div>10,00 €</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="foodseparator">
+                        <div class="food">
+                            <div class="food_image">
+                                 
+                            </div>
+                              
+                
+                            <div class="food_name">
+                                <div class="name">4 Fromages
+                                    <i class="fas fa-info-circle tooltip" aria-hidden="true">
+                                        <span class="tooltiptext"> 
+                                        Allergènes:
+                                        
+                                            Gluten, 
+                                        
+                                            Lait (lactose)
+                                        
+                                        </span>
+                                    </i>
+                                </div>
+                            </div>  
+                            <div class="food_fix"></div> 
+                            <div class="price">
+                                <div>11,00 €</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="foodseparator">
+                        <div class="food">
+                            <div class="food_image">
+                                 
+                            </div>
+                              
+                
+                            <div class="food_name">
+                                <div class="name">Carbonara
+                                    <i class="fas fa-info-circle tooltip" aria-hidden="true">
+                                        <span class="tooltiptext"> 
+                                        Allergènes:
+                                        
+                                            Gluten, 
+                                        
+                                            Lait (lactose)
+                                        
+                                        </span>
+                                    </i>
+                                </div>
+                            </div>  
+                            <div class="food_fix"></div> 
+                            <div class="price">
+                                <div>11,00 €</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="foodseparator">
+                        <div class="food">
+                            <div class="food_image">
+                                 
+                            </div>
+                              
+                
+                            <div class="food_name">
+                                <div class="name">Jambon crème
+                                    <i class="fas fa-info-circle tooltip" aria-hidden="true">
+                                        <span class="tooltiptext"> 
+                                        Allergènes:
+                                        
+                                            Gluten, 
+                                        
+                                            Lait (lactose)
+                                        
+                                        </span>
+                                    </i>
+                                </div>
+                            </div>  
+                            <div class="food_fix"></div> 
+                            <div class="price">
+                                <div>11,00 €</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="foodseparator">
+                        <div class="food">
+                            <div class="food_image">
+                                 
+                            </div>
+                              
+                
+                            <div class="food_name">
+                                <div class="name">Fruits de mer
+                                    <i class="fas fa-info-circle tooltip" aria-hidden="true">
+                                        <span class="tooltiptext"> 
+                                        Allergènes:
+                                        
+                                            Gluten, 
+                                        
+                                            Crustacés
+                                        
+                                        </span>
+                                    </i>
+                                </div>
+                            </div>  
+                            <div class="food_fix"></div> 
+                            <div class="price">
+                                <div>12,00 €</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="foodseparator">
+                        <div class="food">
+                            <div class="food_image">
+                                 
+                            </div>
+                              
+                
+                            <div class="food_name">
+                                <div class="name">Al Pistacchio
+                                    <i class="fas fa-info-circle tooltip" aria-hidden="true">
+                                        <span class="tooltiptext"> 
+                                        Allergènes:
+                                        
+                                            Gluten, 
+                                        
+                                            Lait (lactose), 
+                                        
+                                            Arachides
+                                        
+                                        </span>
+                                    </i>
+                                </div>
+                            </div>  
+                            <div class="food_fix"></div> 
+                            <div class="price">
+                                <div>12,00 €</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="foodseparator">
+                        <div class="food">
+                            <div class="food_image">
+                                 
+                            </div>
+                              
+                
+                            <div class="food_name">
+                                <div class="name">Lasagne Maison
+                                    <i class="fas fa-info-circle tooltip" aria-hidden="true">
+                                        <span class="tooltiptext"> 
+                                        Allergènes:
+                                        
+                                            Gluten, 
+                                        
+                                            Lait (lactose)
+                                        
+                                        </span>
+                                    </i>
+                                </div>
+                            </div>  
+                            <div class="food_fix"></div> 
+                            <div class="price">
+                                <div>12,00 €</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="foodseparator">
+                        <div class="food">
+                            <div class="food_image">
+                                 
+                            </div>
+                              
+                
+                            <div class="food_name">
+                                <div class="name">Terre et mer
+                                    <i class="fas fa-info-circle tooltip" aria-hidden="true">
+                                        <span class="tooltiptext"> 
+                                        Allergènes:
+                                        
+                                            Gluten, 
+                                        
+                                            Crustacés
+                                        
+                                        </span>
+                                    </i>
+                                </div>
+                            </div>  
+                            <div class="food_fix"></div> 
+                            <div class="price">
+                                <div>12,00 €</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="foodseparator">
+                        <div class="food">
+                            <div class="food_image">
+                                 
+                            </div>
+                              
+                
+                            <div class="food_name">
+                                <div class="name">Al Salmone
+                                    <i class="fas fa-info-circle tooltip" aria-hidden="true">
+                                        <span class="tooltiptext"> 
+                                        Allergènes:
+                                        
+                                            Gluten, 
+                                        
+                                            Poisson, 
+                                        
+                                            Lait (lactose)
+                                        
+                                        </span>
+                                    </i>
+                                </div>
+                            </div>  
+                            <div class="food_fix"></div> 
+                            <div class="price">
+                                <div>13,00 €</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="foodseparator">
+                        <div class="food">
+                            <div class="food_image">
+                                 
+                            </div>
+                              
+                
+                            <div class="food_name">
+                                <div class="name">Crevettes
+                                    <i class="fas fa-info-circle tooltip" aria-hidden="true">
+                                        <span class="tooltiptext"> 
+                                        Allergènes:
+                                        
+                                            Gluten, 
+                                        
+                                            Crustacés, 
+                                        
+                                            Lait (lactose)
+                                        
+                                        </span>
+                                    </i>
+                                </div>
+                            </div>  
+                            <div class="food_fix"></div> 
+                            <div class="price">
+                                <div>13,00 €</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="foodseparator">
+                        <div class="food">
+                            <div class="food_image">
+                                 
+                            </div>
+                              
+                
+                            <div class="food_name">
+                                <div class="name">Scampis
+                                    <i class="fas fa-info-circle tooltip" aria-hidden="true">
+                                        <span class="tooltiptext"> 
+                                        Allergènes:
+                                        
+                                            Gluten, 
+                                        
+                                            Crustacés, 
+                                        
+                                            Lait (lactose)
+                                        
+                                        </span>
+                                    </i>
+                                </div>
+                            </div>  
+                            <div class="food_fix"></div> 
+                            <div class="price">
+                                <div>13,00 €</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="infos_suppl">
+                <p> Tagliatelle ou tortellini: +1,00 €</p>
+                <p> Suppléments pâtes gratinées, gruyère, parmesan: +2,50 €</p>
+            </div>
+
+            <div id="desserts" class="foodTypeContainer">
+                <h2>Desserts Maison</h2>
+                <div class="foodlist">
+                    
+                    <div class="foodseparator">
+                        <div class="food">  
+                            <div class="food_name">
+                                <div class="name">Mousse au chocolat
+                                    <i class="fas fa-info-circle tooltip" aria-hidden="true">
+                                        <span class="tooltiptext"> 
+                                        Allergènes:
+                                        
+                                            Gluten, 
+                                        
+                                            Oeuf
+                                        
+                                        </span>
+                                    </i>
+                                </div>
+                            </div>  
+                            <div class="food_fix"></div> 
+                            <div class="price">
+                                <div>4,00 €</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="foodseparator">
+                        <div class="food">
+                            <div class="food_name">
+                                <div class="name">Tiramisu
+                                    <i class="fas fa-info-circle tooltip" aria-hidden="true">
+                                        <span class="tooltiptext"> 
+                                        Allergènes:
+                                        
+                                            Gluten, 
+                                        
+                                            Oeuf, 
+                                        
+                                            Lait (lactose)
+                                        
+                                        </span>
+                                    </i>
+                                </div>
+                            </div>  
+                            <div class="food_fix"></div> 
+                            <div class="price">
+                                <div>4,00 €</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="foodseparator">
+                        <div class="food">  
+                            <div class="food_name">
+                                <div class="name">Tiramisu Speculoos
+                                    <i class="fas fa-info-circle tooltip" aria-hidden="true">
+                                        <span class="tooltiptext"> 
+                                        Allergènes:
+                                        
+                                            Gluten, 
+                                        
+                                            Oeuf, 
+                                        
+                                            Lait (lactose)
+                                        
+                                        </span>
+                                    </i>
+                                </div>
+                            </div>  
+                            <div class="food_fix"></div> 
+                            <div class="price">
+                                <div>4,00 €</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="foodseparator">
+                        <div class="food">
+                            <div class="food_image">
+                                 
+                            </div>
+                              
+                            <div class="food_name">
+                                <div class="name">Mini pizza Nutella
+                                    <i class="fas fa-info-circle tooltip" aria-hidden="true">
+                                        <span class="tooltiptext"> 
+                                        Allergènes:
+                                        
+                                            Gluten, 
+                                        
+                                            Lait (lactose)
+                                        
+                                        </span>
+                                    </i>
+                                </div>
+                            </div>  
+                            <div class="food_fix"></div> 
+                            <div class="price">
+                                <div>5,00 €</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div id="boissons" class="foodTypeContainer">
+                <h2>Boissons</h2>
+                <div class="foodlist">
+                    
+                    <div class="foodseparator">
+                        <div class="food">
+                            <div class="food_image">
+                                 
+                            </div>
+                              
+                
+                            <div class="food_name">
+                                <div class="name">Coca-cola
+                                    <i class="fas fa-info-circle tooltip" aria-hidden="true">
+                                        <span class="tooltiptext"> 
+                                         Aucun allergène
+                                        
+                                        </span>
+                                    </i>
+                                </div>
+                            </div>  
+                            <div class="food_fix"></div> 
+                            <div class="price">
+                                <div>2,00 €</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="foodseparator">
+                        <div class="food">
+                            <div class="food_image">
+                                 
+                            </div>
+                              
+                
+                            <div class="food_name">
+                                <div class="name">Coca-cola zéro
+                                    <i class="fas fa-info-circle tooltip" aria-hidden="true">
+                                        <span class="tooltiptext"> 
+                                         Aucun allergène
+                                        
+                                        </span>
+                                    </i>
+                                </div>
+                            </div>  
+                            <div class="food_fix"></div> 
+                            <div class="price">
+                                <div>2,00 €</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="foodseparator">
+                        <div class="food">
+                            <div class="food_image">
+                                 
+                            </div>
+                              
+                
+                            <div class="food_name">
+                                <div class="name">Fanta
+                                    <i class="fas fa-info-circle tooltip" aria-hidden="true">
+                                        <span class="tooltiptext"> 
+                                         Aucun allergène
+                                        
+                                        </span>
+                                    </i>
+                                </div>
+                            </div>  
+                            <div class="food_fix"></div> 
+                            <div class="price">
+                                <div>2,00 €</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="foodseparator">
+                        <div class="food">
+                            <div class="food_image">
+                                 
+                            </div>
+                              
+                
+                            <div class="food_name">
+                                <div class="name">Ice Tea
+                                    <i class="fas fa-info-circle tooltip" aria-hidden="true">
+                                        <span class="tooltiptext"> 
+                                         Aucun allergène
+                                        
+                                        </span>
+                                    </i>
+                                </div>
+                            </div>  
+                            <div class="food_fix"></div> 
+                            <div class="price">
+                                <div>2,00 €</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="foodseparator">
+                        <div class="food">
+                            <div class="food_image">
+                                 
+                            </div>
+                              
+                
+                            <div class="food_name">
+                                <div class="name">Jupiler
+                                    <i class="fas fa-info-circle tooltip" aria-hidden="true">
+                                        <span class="tooltiptext"> 
+                                         Aucun allergène
+                                        
+                                        </span>
+                                    </i>
+                                </div>
+                            </div>  
+                            <div class="food_fix"></div> 
+                            <div class="price">
+                                <div>2,00 €</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="foodseparator">
+                        <div class="food">
+                            <div class="food_image">
+                                 
+                            </div>
+                              
+                
+                            <div class="food_name">
+                                <div class="name">Sprite
+                                    <i class="fas fa-info-circle tooltip" aria-hidden="true">
+                                        <span class="tooltiptext"> 
+                                         Aucun allergène
+                                        
+                                        </span>
+                                    </i>
+                                </div>
+                            </div>  
+                            <div class="food_fix"></div> 
+                            <div class="price">
+                                <div>2,00 €</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="foodseparator">
+                        <div class="food">
+                            <div class="food_image">
+                                 
+                            </div>
+                              
+                
+                            <div class="food_name">
+                                <div class="name">Vin Rouge
+                                    <i class="fas fa-info-circle tooltip" aria-hidden="true">
+                                        <span class="tooltiptext"> 
+                                        Allergènes:
+                                        
+                                            Sulfites
+                                        
+                                        </span>
+                                    </i>
+                                </div>
+                            </div>  
+                            <div class="food_fix"></div> 
+                            <div class="price">
+                                <div>12,00 €</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="foodseparator">
+                        <div class="food">
+                            <div class="food_image">
+                                 
+                            </div>
+                              
+                
+                            <div class="food_name">
+                                <div class="name">Vin blanc
+                                    <i class="fas fa-info-circle tooltip" aria-hidden="true">
+                                        <span class="tooltiptext"> 
+                                        Allergènes:
+                                        
+                                            Sulfites
+                                        
+                                        </span>
+                                    </i>
+                                </div>
+                            </div>  
+                            <div class="food_fix"></div> 
+                            <div class="price">
+                                <div>12,00 €</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="foodseparator">
+                        <div class="food">
+                            <div class="food_image">
+                                 
+                            </div>
+                              
+                
+                            <div class="food_name">
+                                <div class="name">Vin rosé
+                                    <i class="fas fa-info-circle tooltip" aria-hidden="true">
+                                        <span class="tooltiptext"> 
+                                        Allergènes:
+                                        
+                                            Sulfites
+                                        
+                                        </span>
+                                    </i>
+                                </div>
+                            </div>  
+                            <div class="food_fix"></div> 
+                            <div class="price">
+                                <div>12,00 €</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+    const thumbnails = document.querySelectorAll('.food_thumbnail');
+    thumbnails.forEach(thumbnail => {
+        thumbnail.addEventListener('click', function handleClick(event) {
+            var div = thumbnail.parentElement.querySelector('.food_image');
+            div.style.display = 'flex';
+            div.addEventListener('click', function handleClick(event) {
+                div.style.display = 'none'
+            });
+        });
+    });
+</script>
+{% endblock %}

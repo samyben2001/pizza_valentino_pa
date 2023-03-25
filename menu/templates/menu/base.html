@@ -37,8 +37,7 @@
                                 <tr>
                                     <td>Mercredi</td>
                                     <td>
-                                        <p>11:30 - 14:00</p>
-                                        <p>18:00 - 22:00</p>
+                                        <p>FERM&Eacute;</p>>
                                     </td>
                                 </tr>
                                 <tr>
@@ -141,6 +140,9 @@
             }else{
                 switch (day) {
                 case 2: // Mardi
+                    opendiv.innerHTML = "<span class='closed'>Fermé</span> - Ouvre jeudi à 11:30"; 
+                    break;
+                case 3: // Mercredi
                     opendiv.innerHTML = "<span class='closed'>Fermé</span> - Ouvre demain à 11:30"; 
                     break;
                 case 0: // Dimanche
@@ -165,12 +167,14 @@
                         }
                     }
                     else{
-                        if(hour <= 11 || (hour == 11 && min < 30)){// TODO: Correction
+                        if(hour <= 11 || (hour == 11 && min < 30)){
                             opendiv.innerHTML = "<span class='closed'>Fermé</span> - Ouvre à 11:30";
-                        }else{
+                        }
+                        else
+                        {
                             if (day == 1){ // Lundi
                                 if (hour >= 22)
-                                    opendiv.innerHTML = "<span class='closed'>Fermé</span> - Ouvre mercredi à 11:30";
+                                    opendiv.innerHTML = "<span class='closed'>Fermé</span> - Ouvre jeudi à 11:30";
                                 else{
                                     opendiv.innerHTML = "<span class='closed'>Fermé</span> - Ouvre à 18:00";
                                 }

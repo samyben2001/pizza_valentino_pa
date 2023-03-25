@@ -30,13 +30,16 @@ def get_menu(request):
     pates = Pates.objects.order_by('prix', 'nom').exclude(prix=0)
     desserts = Dessert.objects.order_by('prix', 'nom').exclude(prix=0)
     boissons = Boisson.objects.order_by('prix', 'nom').exclude(prix=0)
-    return render(request, 'menu/menu.html', {
+    try:
+        return render(request, 'menu/menu.html', {
         'entrees': entrees,
         'pizzas': pizzas,
         'pates': pates,
         'desserts': desserts,
         'boissons': boissons
-    })
+        })
+    except:
+        return render(request, 'menu/menu_offline.html', {})
 
 def mail_sender(request):
     # create a variable to keep track of the form
