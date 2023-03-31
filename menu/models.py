@@ -107,8 +107,8 @@ class Boisson(models.Model):
 
 class Service(models.Model):
     nom = models.CharField(max_length=100)
-    debut = models.TimeField(auto_now=False, auto_now_add=False)
-    fin = models.TimeField(auto_now=False, auto_now_add=False)
+    debut = models.TimeField()
+    fin = models.TimeField()
 
     def __str__(self):
         return self.nom
