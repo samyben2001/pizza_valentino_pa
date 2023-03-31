@@ -105,7 +105,7 @@ class Boisson(models.Model):
             models.UniqueConstraint(fields=['nom'], name='unique_boisson_name')
         ]
 
-class Services(models.Model):
+class Service(models.Model):
     nom = models.CharField(max_length=100)
     debut = models.TimeField(auto_now=False, auto_now_add=False)
     fin = models.TimeField(auto_now=False, auto_now_add=False)
@@ -120,7 +120,7 @@ class Services(models.Model):
 
 class Horaire(models.Model):
     jour = models.CharField(max_length=100)
-    services = models.ManyToManyField(Services, blank=True)
+    services = models.ManyToManyField(Service, blank=True)
 
     def __str__(self):
         return self.nom
