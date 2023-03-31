@@ -123,7 +123,7 @@ class Horaire(models.Model):
     services = models.ManyToManyField(Service, blank=True)
 
     def __str__(self):
-        return self.nom
+        return self.jour
     
     class Meta:
         constraints = [
