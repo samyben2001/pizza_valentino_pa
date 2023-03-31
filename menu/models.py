@@ -142,7 +142,7 @@ class Annonce(models.Model):
     
     class Meta:
         widgets = {
-            'annonce': Textarea(attrs={'rows': 10}),
+            'annonce': Textarea(attrs={'cols': 80, 'rows': 10})
         }
         constraints = [
             models.UniqueConstraint(fields=['nom'], name='unique_annonce_name')
