@@ -49,7 +49,7 @@ class servicesAdmin(admin.ModelAdmin):{}
      
 
 class horaireAdmin(admin.ModelAdmin):
-        ordering = ['-pk']
+        ordering = ['pk']
         formfield_overrides = {
         models.ManyToManyField: {'widget': CheckboxSelectMultiple},
     }
