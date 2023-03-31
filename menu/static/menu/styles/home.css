@@ -8,9 +8,12 @@
     font-weight: 700;
     border: 3px double var(--colorRed);
     margin-bottom: 20px;
+    padding-top: 15px;
+    padding-bottom: 15px;
 }
 
 .holidays div{
+    white-space: pre-wrap;
     margin: auto;
 }
 
@@ -242,7 +245,9 @@
 }
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
-
+    .holidays div{
+        width: 50%;
+    }
 }
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {

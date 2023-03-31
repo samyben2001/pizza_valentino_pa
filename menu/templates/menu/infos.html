@@ -17,54 +17,22 @@
                 <div class="infosLivraisonMobile">Livraison gratuite à partir de 16€ dans un rayon de 10km.</div>
                 <div class="horaire">
                     <h2>HEURES D'OUVERTURE</h2>
-                    <table>
+                    <table >
                         <tbody>
+                            {% for jour in horaire %}
                             <tr>
-                                <td>Lundi</td>
+                                <td>{{jour.jour}}</td>
                                 <td>
-                                    <p>11:30 - 14:00</p>
-                                    <p>18:00 - 22:00</p>
-                                </td>
+                                    {% if jour.services.all %}
+                                        {% for service in jour.services.all %}
+                                            <p>{{ service.debut }} - {{ service.fin }}</p>
+                                        {% endfor %}
+                                    {% else %}
+                                        <p>FERM&Eacute;</p>
+                                    {% endif %}
+                                </td>     
                             </tr>
-                            <tr>
-                                <td>Mardi</td>
-                                <td><p>FERM&Eacute;</p>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Mercredi</td>
-                                <td>
-                                    <p>11:30 - 14:00</p>
-                                    <p>18:00 - 22:00</p>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Jeudi</td>
-                                <td>
-                                    <p>11:30 - 14:00</p>
-                                    <p>18:00 - 22:00</p>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Vendredi</td>
-                                <td>
-                                    <p>11:30 - 14:00</p>
-                                    <p>18:00 - 22:00</p>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Samedi</td>
-                                <td>
-                                    <p>11:30 - 14:00</p>
-                                    <p>18:00 - 22:00</p>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Dimanche et fériés</td>
-                                <td><p>18:00 - 22:00</p>
-                                    <p></p>
-                                </td>
-                            </tr>
+                            {% endfor %}
                         </tbody>
                     </table>
                 </div>

@@ -9,27 +9,31 @@ from .models import Pates
 from .models import Dessert
 from .models import Boisson
 from .models import Annonce
+from .models import Horaire
 
 # Create your views here.
-def base(request):
-    return render(request, 'menu/base.html', {
-
-    })
-
 def home(request):
     annonce = Annonce.objects.exclude(actif=False).last
+    horaire = Horaire.objects.order_by('pk')
 
     return render(request, 'menu/home.html', {
-        'annonce': annonce
+        'annonce': annonce,
+        'horaire': horaire
      })
 
 def infos(request):
-    return render(request, 'menu/infos.html', {
+    annonce = Annonce.objects.exclude(actif=False).last
+    horaire = Horaire.objects.order_by('pk')
 
+    return render(request, 'menu/infos.html', {
+        'annonce': annonce,
+        'horaire': horaire
     })
 
     
 def get_menu(request):
+    annonce = Annonce.objects.exclude(actif=False).last
+    horaire = Horaire.objects.order_by('pk')
     entrees = Entree.objects.order_by('prix', 'nom').exclude(prix=0)
     pizzas = Pizza.objects.order_by('-suggestion', 'prix', 'nom').exclude(prix=0)
     pates = Pates.objects.order_by('prix', 'nom').exclude(prix=0)
@@ -41,7 +45,9 @@ def get_menu(request):
         'pizzas': pizzas,
         'pates': pates,
         'desserts': desserts,
-        'boissons': boissons
+        'boissons': boissons,
+        'annonce': annonce,
+        'horaire': horaire
         })
     except:
         return render(request, 'menu/menu_offline.html', {})
