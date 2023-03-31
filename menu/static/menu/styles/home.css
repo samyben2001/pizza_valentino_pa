@@ -7,6 +7,7 @@
 .holidays{
     font-weight: 700;
     border: 3px double var(--colorRed);
+    margin-bottom: 20px;
 }
 
 .holidays div{

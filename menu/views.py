@@ -8,16 +8,24 @@ from .models import Pizza
 from .models import Pates
 from .models import Dessert
 from .models import Boisson
+from .models import Annonce
 
 # Create your views here.
-def home(request):
-    return render(request, 'menu/home.html', {
+def base(request):
+    return render(request, 'menu/base.html', {
 
+    })
+
+def home(request):
+    annonce = Annonce.objects.exclude(actif=False).last
+
+    return render(request, 'menu/home.html', {
+        'annonce': annonce
      })
 
 def infos(request):
     return render(request, 'menu/infos.html', {
-        
+
     })
 
     
