@@ -126,6 +126,7 @@ class Horaire(models.Model):
         return self.jour
     
     class Meta:
+        ordering = ['pk']
         constraints = [
             models.UniqueConstraint(fields=['jour'], name='unique_horaire_name')
         ]
