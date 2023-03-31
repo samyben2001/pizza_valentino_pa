@@ -102,3 +102,46 @@ class Boisson(models.Model):
         constraints = [
             models.UniqueConstraint(fields=['nom'], name='unique_boisson_name')
         ]
+
+class Services(models.Model):
+    nom = models.CharField(max_length=100)
+    debut = models.TimeField(auto_now=False, auto_now_add=False)
+    fin = models.TimeField(auto_now=False, auto_now_add=False)
+
+    def __str__(self):
+        return self.nom
+    
+    class Meta:
+        constraints = [
+            models.UniqueConstraint(fields=['nom'], name='unique_services_name')
+        ]
+
+class Horaire(models.Model):
+    jour = models.CharField(max_length=100)
+    services = models.ManyToManyField(Services, blank=True)
+
+    def __str__(self):
+        return self.nom
+    
+    class Meta:
+        constraints = [
+            models.UniqueConstraint(fields=['jour'], name='unique_horaire_name')
+        ]
+
+class Annonce(models.Model):
+    nom = models.CharField(max_length=100)
+    actif = models.BooleanField()
+    debut = models.DateField()
+    fin = models.DateField()
+    annonce = models.TextField()
+
+    def __str__(self):
+        return self.nom
+    
+    class Meta:
+        constraints = [
+            models.UniqueConstraint(fields=['nom'], name='unique_annonce_name')
+            widgets = {
+            'annonce': Textarea(attrs={'rows': 10}),
+        }
+        ]
