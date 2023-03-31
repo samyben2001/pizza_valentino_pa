@@ -2,7 +2,7 @@ from django.contrib import admin
 from django.db import models
 from django.forms import CheckboxSelectMultiple
 from django.contrib.auth.models  import  Group 
-from .models import Ingredient,Allergene,Entree,Pizza,Pates,Dessert,Boisson,Services,Horaire,Annonce
+from .models import Ingredient,Allergene,Entree,Pizza,Pates,Dessert,Boisson,Service,Horaire,Annonce
 
 admin.site.unregister(Group)  
 
@@ -62,6 +62,6 @@ admin.site.register(Pizza, pizzaAdmin)
 admin.site.register(Pates, patesAdmin)
 admin.site.register(Dessert, dessertsAdmin)
 admin.site.register(Boisson, boissonAdmin)
-admin.site.register(Services, servicesAdmin)
+admin.site.register(Service, servicesAdmin)
 admin.site.register(Horaire, horaireAdmin)
 admin.site.register(Annonce, annonceAdmin)
