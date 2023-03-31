@@ -4,6 +4,15 @@
     flex-direction: column;
 }
 
+.holidays{
+    font-weight: 700;
+    border: 3px double var(--colorRed);
+}
+
+.holidays div{
+    margin: auto;
+}
+
 .home .container{
     padding: 0 10px 0 10px;
     margin: 0;
