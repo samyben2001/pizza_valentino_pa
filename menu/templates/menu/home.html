@@ -14,11 +14,13 @@
                 <div class="foodbooking_div">
                     <a class="foodbooking_link" href="https://www.foodbooking.com/ordering/restaurant/menu?company_uid=cfa829ec-f0ed-4d5a-a81b-4d323c6854d2&restaurant_uid=cae7ef12-c4dc-46aa-aad0-7b49dacbda07">Commander en ligne</a>
                 </div>
+                {% if annonce %}
                 <div class="flex holidays">
                     <div>
                         {{annonce.annonce}}
                     </div>
                 </div>
+                {% endif %}
                 <div class="flex">
                     <div>
                         <p>Nous servons les meilleures pizzas aux meilleurs prix depuis 1996.</p>
