@@ -2,6 +2,8 @@ from django_resized import ResizedImageField
 from distutils.command.upload import upload
 from django.contrib import admin
 from django.db import models
+from django.forms import ModelForm, Textarea
+
 
 class Ingredient(models.Model):
     nom = models.CharField(max_length=100)
@@ -139,9 +141,9 @@ class Annonce(models.Model):
         return self.nom
     
     class Meta:
-        constraints = [
-            models.UniqueConstraint(fields=['nom'], name='unique_annonce_name')
-            widgets = {
+        widgets = {
             'annonce': Textarea(attrs={'rows': 10}),
         }
+        constraints = [
+            models.UniqueConstraint(fields=['nom'], name='unique_annonce_name')
         ]
