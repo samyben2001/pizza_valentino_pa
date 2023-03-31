@@ -11,17 +11,14 @@ from .models import Boisson
 
 # Create your views here.
 def home(request):
-    current_day = time.strftime("%A")
-    current_time = time.strftime("%H:%M")
-    #TODO: check date and return 'open' or 'close'
     return render(request, 'menu/home.html', {
-        'current_day': current_day,
-        'current_time': current_time
-    })
+
+     })
 
 def infos(request):
     return render(request, 'menu/infos.html', {
-})
+        
+    })
 
     
 def get_menu(request):
