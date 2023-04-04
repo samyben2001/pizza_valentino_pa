@@ -13,6 +13,7 @@ class Ingredient(models.Model):
         return self.nom
 
     class Meta:
+        verbose_name_plural = "01. Ingrédients"
         constraints = [
             models.UniqueConstraint(fields=['nom'], name='unique_ingredient_name')
         ]       
@@ -24,6 +25,7 @@ class Allergene(models.Model):
         return self.nom
 
     class Meta:
+        verbose_name_plural = "02. Allergènes"
         constraints = [
             models.UniqueConstraint(fields=['nom'], name='unique_allergene_name')
         ]
@@ -38,6 +40,7 @@ class Entree(models.Model):
         return self.nom
 
     class Meta:
+        verbose_name_plural = "03. Entrées"
         constraints = [
             models.UniqueConstraint(fields=['nom'], name='unique_entree_name')
         ]
@@ -58,6 +61,7 @@ class Pizza(models.Model):
         return self.nom
 
     class Meta:
+        verbose_name_plural = "04. Pizzas"
         constraints = [
             models.UniqueConstraint(fields=['nom'], name='unique_pizza_name')
         ]
@@ -72,10 +76,10 @@ class Pates(models.Model):
         return self.nom
 
     class Meta:
+        verbose_name_plural = "05. Pâtes"
         constraints = [
             models.UniqueConstraint(fields=['nom'], name='unique_pates_name')
         ]
-        verbose_name_plural  =  "Pates"
 
 class Dessert(models.Model):
     nom = models.CharField(max_length=100)
@@ -87,6 +91,7 @@ class Dessert(models.Model):
         return self.nom
 
     class Meta:
+        verbose_name_plural = "06. Desserts"
         constraints = [
             models.UniqueConstraint(fields=['nom'], name='unique_dessert_name')
         ]
@@ -101,6 +106,7 @@ class Boisson(models.Model):
         return self.nom
 
     class Meta:
+        verbose_name_plural = "07. Boissons"
         constraints = [
             models.UniqueConstraint(fields=['nom'], name='unique_boisson_name')
         ]
@@ -114,6 +120,7 @@ class Service(models.Model):
         return self.nom
     
     class Meta:
+        verbose_name_plural = "09. Services"
         constraints = [
             models.UniqueConstraint(fields=['nom'], name='unique_services_name')
         ]
@@ -126,6 +133,7 @@ class Horaire(models.Model):
         return self.jour
     
     class Meta:
+        verbose_name_plural = "10. Horaire"
         ordering = ['pk']
         constraints = [
             models.UniqueConstraint(fields=['jour'], name='unique_horaire_name')
@@ -136,12 +144,13 @@ class Annonce(models.Model):
     actif = models.BooleanField()
     debut = models.DateField()
     fin = models.DateField()
-    annonce = models.TextField()
+    annonce = models.TextField(null=True, blank=True)
 
     def __str__(self):
         return self.nom
     
     class Meta:
+        verbose_name_plural = "08. Annonces"
         constraints = [
             models.UniqueConstraint(fields=['nom'], name='unique_annonce_name')
         ]

@@ -17,10 +17,14 @@
             <div id="infos">
                 <a class="tel" href="tel:+3281569538"><i class="fa-solid fa-phone fa-xs"></i> 081/56 95 38</a>
                 <div id="horaire">
-                    <div id="isOpen"></div>
+                    <div id="isOpen" class='closed'>
+                        <span {% if isOpen == 'Ouvert' %} class='opened' {% else %} class='closed' {% endif %}>{{isOpen}}</span>
+                        {{next}}
+                        <i class='fa-solid fa-angle-down' onclick='OpenHoraire()''></i>
+                    </div>
                     <div id="horaireBg" onclick="CloseHoraire()"></div>
                     <div id="horairedDropdown"> 
-                        <table >
+                        <table>
                             <tbody>
                                 {% for jour in horaire %}
                                 <tr>
@@ -88,78 +92,78 @@
             document.getElementById("sideMenu").style.right = "-220px";
         }
 
-        function isOpen() {
-            opendiv = document.getElementById("isOpen");
-            opendiv.innerHTML = "isOpen?";
+        // function isOpen() {
+        //     opendiv = document.getElementById("isOpen");
+        //     opendiv.innerHTML = "isOpen?";
             
-            const d = new Date();
-            day =  d.getDay();
-            hour =  d.getHours();
-            min = d.getMinutes();
+            // const d = new Date();
+            // day =  d.getDay();
+            // hour =  d.getHours();
+            // min = d.getMinutes();
 
-            hollyday = false; // MODIFY FOR HOLLYDAYS
-            if (hollyday){
-                opendiv.innerHTML = "<span class='closed'>Fermé jusqu'au 2 aout</span> ";
-            }else{
-                switch (day) {
-                case 2: // Mardi
-                    opendiv.innerHTML = "<span class='closed'>Fermé</span> - Ouvre jeudi à 11:30"; 
-                    break;
-                case 3: // Mercredi
-                    opendiv.innerHTML = "<span class='closed'>Fermé</span> - Ouvre demain à 11:30"; 
-                    break;
-                case 0: // Dimanche
-                    if (hour >= 18 && hour < 22){
-                        opendiv.innerHTML = "<span class='opened'>Ouvert</span> - Ferme à 22:00";
-                    }
-                    else{
-                        if (hour >= 22){
-                            opendiv.innerHTML = "<span class='closed'>Fermé</span> - Ouvre demain à 11:30";
-                        }else{
-                            opendiv.innerHTML = "<span class='closed'>Fermé</span> - Ouvre à 18:00";
-                        }
-                    }
-                    break;
-                default: // Autres
-                    if (hour >= 18 && hour < 22 || (hour >= 11 && min >= 30) && hour < 14 || hour >= 12 && hour < 14) {
-                        if(hour < 14){
-                            opendiv.innerHTML = "<span class='opened'>Ouvert</span> - Ferme à 14:00";
-                        }
-                        else{
-                            opendiv.innerHTML = "<span class='opened'>Ouvert</span> - Ferme à 22:00";
-                        }
-                    }
-                    else{
-                        if(hour <= 11 || (hour == 11 && min < 30)){
-                            opendiv.innerHTML = "<span class='closed'>Fermé</span> - Ouvre à 11:30";
-                        }
-                        else
-                        {
-                            if (day == 1){ // Lundi
-                                if (hour >= 22)
-                                    opendiv.innerHTML = "<span class='closed'>Fermé</span> - Ouvre jeudi à 11:30";
-                                else{
-                                    opendiv.innerHTML = "<span class='closed'>Fermé</span> - Ouvre à 18:00";
-                                }
-                            }else if (day == 6){ // Samedi
-                                if (hour >= 22)
-                                    opendiv.innerHTML = "<span class='closed'>Fermé</span> - Ouvre demain à 18:00";
-                                else{
-                                    opendiv.innerHTML = "<span class='closed'>Fermé</span> - Ouvre à 18:00";
-                                }
-                            }else{
-                                if (hour >= 22)
-                                    opendiv.innerHTML = "<span class='closed'>Fermé</span> - Ouvre demain à 11:30";
-                                else{
-                                    opendiv.innerHTML = "<span class='closed'>Fermé</span> - Ouvre à 18:00";
-                                }
-                            }
-                        }
-                    }
-                }
-            } 
-            opendiv.innerHTML += "<i class='fa-solid fa-angle-down' onclick='OpenHoraire()''></i>";
-        }
+            // hollyday = false; // MODIFY FOR HOLLYDAYS
+            // if (hollyday){
+            //     opendiv.innerHTML = "<span class='closed'>Fermé jusqu'au 2 aout</span> ";
+            // }else{
+            //     switch (day) {
+            //     case 2: // Mardi
+            //         opendiv.innerHTML = "<span class='closed'>Fermé</span> - Ouvre jeudi à 11:30"; 
+            //         break;
+            //     case 3: // Mercredi
+            //         opendiv.innerHTML = "<span class='closed'>Fermé</span> - Ouvre demain à 11:30"; 
+            //         break;
+            //     case 0: // Dimanche
+            //         if (hour >= 18 && hour < 22){
+            //             opendiv.innerHTML = "<span class='opened'>Ouvert</span> - Ferme à 22:00";
+            //         }
+            //         else{
+            //             if (hour >= 22){
+            //                 opendiv.innerHTML = "<span class='closed'>Fermé</span> - Ouvre demain à 11:30";
+            //             }else{
+            //                 opendiv.innerHTML = "<span class='closed'>Fermé</span> - Ouvre à 18:00";
+            //             }
+            //         }
+            //         break;
+            //     default: // Autres
+            //         if (hour >= 18 && hour < 22 || (hour >= 11 && min >= 30) && hour < 14 || hour >= 12 && hour < 14) {
+            //             if(hour < 14){
+            //                 opendiv.innerHTML = "<span class='opened'>Ouvert</span> - Ferme à 14:00";
+            //             }
+            //             else{
+            //                 opendiv.innerHTML = "<span class='opened'>Ouvert</span> - Ferme à 22:00";
+            //             }
+            //         }
+            //         else{
+            //             if(hour <= 11 || (hour == 11 && min < 30)){
+            //                 opendiv.innerHTML = "<span class='closed'>Fermé</span> - Ouvre à 11:30";
+            //             }
+            //             else
+            //             {
+            //                 if (day == 1){ // Lundi
+            //                     if (hour >= 22)
+            //                         opendiv.innerHTML = "<span class='closed'>Fermé</span> - Ouvre jeudi à 11:30";
+            //                     else{
+            //                         opendiv.innerHTML = "<span class='closed'>Fermé</span> - Ouvre à 18:00";
+            //                     }
+            //                 }else if (day == 6){ // Samedi
+            //                     if (hour >= 22)
+            //                         opendiv.innerHTML = "<span class='closed'>Fermé</span> - Ouvre demain à 18:00";
+            //                     else{
+            //                         opendiv.innerHTML = "<span class='closed'>Fermé</span> - Ouvre à 18:00";
+            //                     }
+            //                 }else{
+            //                     if (hour >= 22)
+            //                         opendiv.innerHTML = "<span class='closed'>Fermé</span> - Ouvre demain à 11:30";
+            //                     else{
+            //                         opendiv.innerHTML = "<span class='closed'>Fermé</span> - Ouvre à 18:00";
+            //                     }
+            //                 }
+            //             }
+            //         }
+            //     }
+            // } 
+            // opendiv.innerHTML += "<i class='fa-solid fa-angle-down' onclick='OpenHoraire()''></i>";
+        // }
 
         function OpenHoraire() {
             h = document.getElementById("horairedDropdown");
