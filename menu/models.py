@@ -126,7 +126,9 @@ class Service(models.Model):
         ]
 
 class Horaire(models.Model):
-    jour = models.CharField(max_length=100)
+    jour = models.CharField(max_length=100,
+                            choices=[("Lundi","Lundi"),("Mardi","Mardi"),("Mercredi","Mercredi"),("Jeudi","Jeudi"),("Vendredi","Vendredi"),("Samedi","Samedi"),("Dimanche","Dimanche"),])
+    
     services = models.ManyToManyField(Service, blank=True)
 
     def __str__(self):

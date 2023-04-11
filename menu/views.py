@@ -21,7 +21,6 @@ def check_if_open():
     now = dt.time()
     isOpen = ""
     next = ""
-    print(annonce)
 
     if annonce and (annonce.actif and (annonce.debut <= today <= annonce.fin)): # check si annonce active
         isOpen = "Fermé"
@@ -39,14 +38,16 @@ def check_if_open():
                             isOpen = "Fermé"
                 else:
                             isOpen = "Fermé"
-                if day == 7: # recherche prochaine reouverture à partir de dimanche
+                if day == 7 and now > jour.services.all().last().fin: # recherche prochaine reouverture à partir de dimanche apres services
                     for k in horaire:
                         for ser in k.services.all():
                             if ser:
                                 if k.pk == 1:
                                     next = " - Ouvre demain à " + str(ser.debut.strftime('%H:%M'))
+                                    break
                                 else:
                                     next = " - Ouvre " + str(k.jour).lower() + " à " + str(ser.debut.strftime('%H:%M'))
+                                    break
                         if next != "":
                             break
                 else: # recherche prochaine reouverture les autres jours
@@ -69,7 +70,7 @@ def check_if_open():
 
 # Create your views here.
 def home(request):
-    annonce = Annonce.objects.exclude(actif=False).last
+    annonce = Annonce.objects.exclude(actif=False).last()
     horaire = Horaire.objects.order_by('pk')
     isOpen, next = check_if_open()
 
@@ -81,7 +82,7 @@ def home(request):
      })
 
 def infos(request):
-    annonce = Annonce.objects.exclude(actif=False).last
+    annonce = Annonce.objects.exclude(actif=False).last()
     horaire = Horaire.objects.order_by('pk')
     isOpen, next = check_if_open()
 
@@ -94,7 +95,7 @@ def infos(request):
 
     
 def get_menu(request):
-    annonce = Annonce.objects.exclude(actif=False).last
+    annonce = Annonce.objects.exclude(actif=False).last()
     horaire = Horaire.objects.order_by('pk')
     isOpen, next = check_if_open()
 
